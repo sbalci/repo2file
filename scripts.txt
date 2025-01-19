@@ -1,0 +1,19 @@
+python dump.py "C:\Users\info\Documents\GitHub\dpat_imageanalysisapi_sdk" output.txt .gitignore 
+
+python dump.py "C:\Users\info\Documents\GitHub\ClinicoPathDescriptives" ClinicoPathDescriptives.txt .gitignore  
+
+python dump.py "C:\Users\info\Documents\GitHub\jsurvival" jsurvival.txt .gitignore  
+
+python dump.py "C:\Users\info\Documents\GitHub\meddecide" meddecide.txt .gitignore  
+
+python dump.py "C:\Users\info\Documents\GitHub\jjstatsplot" jjstatsplot.txt .gitignore  
+
+python dump2.py "C:\Users\info\Documents\GitHub\ClinicoPathDescriptives" ClinicoPathDescriptives.txt "C:\Users\info\Documents\GitHub\ClinicoPathDescriptives\.gitignore" "exclude.txt" .R .yaml 
+
+python dump2.py "C:\Users\info\Documents\GitHub\jsurvival" jsurvival.txt "C:\Users\info\Documents\GitHub\jsurvival\.gitignore" "exclude.txt" .R .yaml 
+
+python dump2.py "C:\Users\info\Documents\GitHub\meddecide" meddecide.txt "C:\Users\info\Documents\GitHub\meddecide\.gitignore" "exclude.txt" .R .yaml 
+
+python dump2.py "C:\Users\info\Documents\GitHub\jjstatsplot" jjstatsplot.txt "C:\Users\info\Documents\GitHub\jjstatsplot\.gitignore" "exclude.txt" .R .yaml 
+
+python dump2.py "C:\Users\info\Documents\GitHub\tidyplots" tidyplots.txt "C:\Users\info\Documents\GitHub\jjstatsplot\.gitignore" "exclude.txt" .R .Rmd 

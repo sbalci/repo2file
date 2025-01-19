@@ -1,0 +1,2372 @@
+Directory Structure:
+-------------------
+/ 
+├── data/
+│   ├── animals.rda
+│   ├── climate.rda
+│   ├── dinosaurs.rda
+│   ├── distributions.rda
+│   ├── energy.rda
+│   ├── energy_week.rda
+│   ├── eu_countries.rda
+│   ├── gene_expression.rda
+│   ├── spendings.rda
+│   ├── study.rda
+│   └── time_course.rda
+├── data-raw/
+│   ├── energy_charts_download/
+│   │   ├── energy-charts_Public_net_electricity_generation_in_Germany_in_2002.csv
+│   │   ├── energy-charts_Public_net_electricity_generation_in_Germany_in_2003.csv
+│   │   ├── energy-charts_Public_net_electricity_generation_in_Germany_in_2004.csv
+│   │   ├── energy-charts_Public_net_electricity_generation_in_Germany_in_2005.csv
+│   │   ├── energy-charts_Public_net_electricity_generation_in_Germany_in_2006.csv
+│   │   ├── energy-charts_Public_net_electricity_generation_in_Germany_in_2007.csv
+│   │   ├── energy-charts_Public_net_electricity_generation_in_Germany_in_2008.csv
+│   │   ├── energy-charts_Public_net_electricity_generation_in_Germany_in_2009.csv
+│   │   ├── energy-charts_Public_net_electricity_generation_in_Germany_in_2010.csv
+│   │   ├── energy-charts_Public_net_electricity_generation_in_Germany_in_2011.csv
+│   │   ├── energy-charts_Public_net_electricity_generation_in_Germany_in_2012.csv
+│   │   ├── energy-charts_Public_net_electricity_generation_in_Germany_in_2013.csv
+│   │   ├── energy-charts_Public_net_electricity_generation_in_Germany_in_2014.csv
+│   │   ├── energy-charts_Public_net_electricity_generation_in_Germany_in_2015.csv
+│   │   ├── energy-charts_Public_net_electricity_generation_in_Germany_in_2016.csv
+│   │   ├── energy-charts_Public_net_electricity_generation_in_Germany_in_2017.csv
+│   │   ├── energy-charts_Public_net_electricity_generation_in_Germany_in_2018.csv
+│   │   ├── energy-charts_Public_net_electricity_generation_in_Germany_in_2019.csv
+│   │   ├── energy-charts_Public_net_electricity_generation_in_Germany_in_2020.csv
+│   │   ├── energy-charts_Public_net_electricity_generation_in_Germany_in_2021.csv
+│   │   ├── energy-charts_Public_net_electricity_generation_in_Germany_in_2022.csv
+│   │   ├── energy-charts_Public_net_electricity_generation_in_Germany_in_2023.csv
+│   │   ├── energy-charts_Public_net_electricity_generation_in_Germany_in_2024.csv
+│   │   └── energy-charts_Public_net_electricity_generation_in_Germany_in_week_36_2023.csv
+│   ├── animals.R
+│   ├── animals.tsv
+│   ├── climate.R
+│   ├── dinosaurs.R
+│   ├── dinosaurs.tsv
+│   ├── distributions.R
+│   ├── energy.R
+│   ├── energy_total_hour.csv
+│   ├── energy_total_year.csv
+│   ├── energy_week.R
+│   ├── eu_countries.csv
+│   ├── eu_countries.R
+│   ├── gene_expression.csv
+│   ├── gene_expression.R
+│   ├── gene_statistics.R
+│   ├── GM000010147.csv
+│   ├── spendings.R
+│   ├── spendings.tsv
+│   ├── study.R
+│   ├── time_course.R
+│   └── time_course.txt
+├── inst/
+│   └── CITATION
+├── man/
+│   ├── figures/
+│   │   ├── logo.svg
+│   │   ├── README-unnamed-chunk-10-1.png
+│   │   ├── README-unnamed-chunk-11-1.png
+│   │   ├── README-unnamed-chunk-12-1.png
+│   │   ├── README-unnamed-chunk-12-2.png
+│   │   ├── README-unnamed-chunk-2-1.png
+│   │   ├── README-unnamed-chunk-3-1.png
+│   │   ├── README-unnamed-chunk-4-1.png
+│   │   ├── README-unnamed-chunk-5-1.png
+│   │   ├── README-unnamed-chunk-6-1.png
+│   │   ├── README-unnamed-chunk-7-1.png
+│   │   ├── README-unnamed-chunk-8-1.png
+│   │   ├── README-unnamed-chunk-9-1.png
+│   │   └── unnamed-chunk-1-1.png
+│   ├── add.Rd
+│   ├── add_annotation_text.Rd
+│   ├── add_areastack_absolute.Rd
+│   ├── add_barstack_absolute.Rd
+│   ├── add_boxplot.Rd
+│   ├── add_count_bar.Rd
+│   ├── add_curve_fit.Rd
+│   ├── add_data_labels.Rd
+│   ├── add_data_points.Rd
+│   ├── add_heatmap.Rd
+│   ├── add_histogram.Rd
+│   ├── add_line.Rd
+│   ├── add_mean_bar.Rd
+│   ├── add_median_bar.Rd
+│   ├── add_pie.Rd
+│   ├── add_reference_lines.Rd
+│   ├── add_sem_errorbar.Rd
+│   ├── add_sem_ribbon.Rd
+│   ├── add_sum_bar.Rd
+│   ├── add_test_pvalue.Rd
+│   ├── add_title.Rd
+│   ├── add_violin.Rd
+│   ├── adjust_colors.Rd
+│   ├── adjust_font.Rd
+│   ├── adjust_legend_title.Rd
+│   ├── adjust_padding.Rd
+│   ├── adjust_size.Rd
+│   ├── adjust_theme_details.Rd
+│   ├── adjust_title.Rd
+│   ├── adjust_x_axis.Rd
+│   ├── all_rows.Rd
+│   ├── animals.Rd
+│   ├── as_tidyplot.Rd
+│   ├── climate.Rd
+│   ├── colors_continuous_viridis.Rd
+│   ├── colors_discrete_friendly.Rd
+│   ├── colors_diverging_blue2red.Rd
+│   ├── common_arguments.Rd
+│   ├── dinosaurs.Rd
+│   ├── distributions.Rd
+│   ├── energy.Rd
+│   ├── energy_week.Rd
+│   ├── eu_countries.Rd
+│   ├── flip_plot.Rd
+│   ├── format_number.Rd
+│   ├── gene_expression.Rd
+│   ├── grapes-greater-than-grapes.Rd
+│   ├── new_color_scheme.Rd
+│   ├── remove_legend.Rd
+│   ├── remove_padding.Rd
+│   ├── remove_title.Rd
+│   ├── remove_x_axis.Rd
+│   ├── remove_y_axis.Rd
+│   ├── rename_x_axis_labels.Rd
+│   ├── reorder_x_axis_labels.Rd
+│   ├── reverse_x_axis_labels.Rd
+│   ├── save_plot.Rd
+│   ├── sort_x_axis_labels.Rd
+│   ├── spendings.Rd
+│   ├── split_plot.Rd
+│   ├── study.Rd
+│   ├── theme_tidyplot.Rd
+│   ├── tidyplot.Rd
+│   ├── tidyplots-package.Rd
+│   ├── time_course.Rd
+│   └── view_plot.Rd
+├── pkgdown/
+│   ├── favicon/
+│   │   ├── apple-touch-icon-120x120.png
+│   │   ├── apple-touch-icon-152x152.png
+│   │   ├── apple-touch-icon-180x180.png
+│   │   ├── apple-touch-icon-60x60.png
+│   │   ├── apple-touch-icon-76x76.png
+│   │   ├── apple-touch-icon.png
+│   │   ├── favicon-16x16.png
+│   │   ├── favicon-32x32.png
+│   │   ├── favicon-96x96.png
+│   │   ├── favicon.ico
+│   │   ├── favicon.svg
+│   │   ├── site.webmanifest
+│   │   ├── web-app-manifest-192x192.png
+│   │   └── web-app-manifest-512x512.png
+│   └── extra.css
+├── R/
+│   ├── aaa.R
+│   ├── add-annotation.R
+│   ├── add-general.R
+│   ├── add-heatmap.R
+│   ├── add-misc.R
+│   ├── add-points.R
+│   ├── add-proportional.R
+│   ├── add-stats.R
+│   ├── adjust.R
+│   ├── colors.R
+│   ├── data.R
+│   ├── helpers.R
+│   ├── labels.R
+│   ├── plot.R
+│   ├── remove.R
+│   ├── themes.R
+│   ├── tidycolor.R
+│   └── tidyplots-package.R
+├── revdep/
+│   ├── cran.md
+│   ├── failures.md
+│   ├── problems.md
+│   └── README.md
+├── tests/
+│   ├── testthat/
+│   │   ├── _snaps/
+│   │   │   ├── add-annotation/
+│   │   │   │   ├── add-annotation-line.svg
+│   │   │   │   ├── add-annotation-rectangle-orange-border.svg
+│   │   │   │   ├── add-annotation-rectangle.svg
+│   │   │   │   ├── add-annotation-text.svg
+│   │   │   │   ├── add-reference-lines.svg
+│   │   │   │   └── add-title-and-caption.svg
+│   │   │   ├── add-general/
+│   │   │   │   ├── add-count-x.svg
+│   │   │   │   ├── add-error-bars-xy.svg
+│   │   │   │   ├── add-error-bars-yx.svg
+│   │   │   │   ├── add-error-ribbon-xy.svg
+│   │   │   │   ├── add-error-ribbon-yx.svg
+│   │   │   │   ├── add-grouped-count-x.svg
+│   │   │   │   ├── add-grouped-error-bar-xy.svg
+│   │   │   │   ├── add-grouped-error-ribbon-xy.svg
+│   │   │   │   ├── add-grouped-line.svg
+│   │   │   │   ├── add-grouped-mean-xy.svg
+│   │   │   │   ├── add-grouped-median-xy.svg
+│   │   │   │   ├── add-grouped-sum-xy.svg
+│   │   │   │   ├── add-mean-xy.svg
+│   │   │   │   ├── add-mean-yx.svg
+│   │   │   │   ├── add-median-xy.svg
+│   │   │   │   ├── add-median-yx.svg
+│   │   │   │   ├── add-sum-xy.svg
+│   │   │   │   ├── add-sum-yx.svg
+│   │   │   │   ├── change-dodge-width-and-bar-width.svg
+│   │   │   │   ├── change-dodge-width.svg
+│   │   │   │   ├── no-discrete-axis-dodge-width-0-8.svg
+│   │   │   │   ├── no-discrete-axis-dodge-width-0.svg
+│   │   │   │   ├── no-discrete-axis-no-provided-dodge-width.svg
+│   │   │   │   ├── no-discrete-axis-override.svg
+│   │   │   │   ├── no-discrete-axis.svg
+│   │   │   │   ├── one-discrete-axis-dodge-width-0-8.svg
+│   │   │   │   ├── one-discrete-axis-dodge-width-0.svg
+│   │   │   │   ├── one-discrete-axis-no-provided-dodge-width.svg
+│   │   │   │   ├── one-discrete-axis-override.svg
+│   │   │   │   └── one-discrete-axis.svg
+│   │   │   ├── add-heatmap/
+│   │   │   │   ├── heatmap-rename-x.svg
+│   │   │   │   ├── heatmap-rename-y.svg
+│   │   │   │   ├── heatmap-reorder-x-axis-1.svg
+│   │   │   │   ├── heatmap-reorder-y-axis-1.svg
+│   │   │   │   ├── heatmap-reorder-y-axis-2.svg
+│   │   │   │   ├── heatmap-reverse-x.svg
+│   │   │   │   ├── heatmap-reverse-y.svg
+│   │   │   │   ├── heatmap-sort-x-1.svg
+│   │   │   │   ├── heatmap-sort-x-2.svg
+│   │   │   │   ├── heatmap-sort-x-3.svg
+│   │   │   │   ├── heatmap-sort-x-4.svg
+│   │   │   │   ├── heatmap-sort-y-1.svg
+│   │   │   │   ├── heatmap-sort-y-2.svg
+│   │   │   │   ├── heatmap-sort-y-3.svg
+│   │   │   │   ├── heatmap-with-scale-column.svg
+│   │   │   │   ├── heatmap-with-scale-row.svg
+│   │   │   │   ├── heatmap-without-scaling.svg
+│   │   │   │   └── rasterize-heatmap.svg
+│   │   │   ├── add-misc/
+│   │   │   │   ├── boxplot-grouped.svg
+│   │   │   │   └── boxplot.svg
+│   │   │   ├── add-points/
+│   │   │   │   ├── add-data-points-beaswarm.svg
+│   │   │   │   ├── add-data-points-jitter.svg
+│   │   │   │   ├── add-data-points.svg
+│   │   │   │   ├── add-white-border-data-points-beaswarm.svg
+│   │   │   │   ├── add-white-border-data-points-jitter.svg
+│   │   │   │   ├── add-white-border-data-points.svg
+│   │   │   │   ├── rasterize-data-points-beaswarm.svg
+│   │   │   │   ├── rasterize-data-points-jitter.svg
+│   │   │   │   ├── rasterize-data-points.svg
+│   │   │   │   ├── rasterize-white-border-data-points-beaswarm.svg
+│   │   │   │   ├── rasterize-white-border-data-points-jitter.svg
+│   │   │   │   └── rasterize-white-border-data-points.svg
+│   │   │   ├── add-proportional/
+│   │   │   │   ├── absolute-areastack-replace-na-x.svg
+│   │   │   │   ├── absolute-areastack-replace-na-xy.svg
+│   │   │   │   ├── absolute-areastack-replace-na-y.svg
+│   │   │   │   ├── absolute-areastack-replace-na-yx.svg
+│   │   │   │   ├── absolute-areastack-x.svg
+│   │   │   │   ├── absolute-areastack-xy.svg
+│   │   │   │   ├── absolute-areastack-y.svg
+│   │   │   │   ├── absolute-areastack-yx.svg
+│   │   │   │   ├── absolute-barstack-no-x.svg
+│   │   │   │   ├── absolute-barstack-x.svg
+│   │   │   │   ├── absolute-barstack-xy.svg
+│   │   │   │   ├── absolute-barstack-y.svg
+│   │   │   │   ├── absolute-barstack-yx.svg
+│   │   │   │   ├── barstack-with-date-x.svg
+│   │   │   │   ├── barstack-with-date-xy.svg
+│   │   │   │   ├── barstack-with-date-y.svg
+│   │   │   │   ├── barstack-with-date-yx.svg
+│   │   │   │   ├── donut-count-1.svg
+│   │   │   │   ├── donut-count-2.svg
+│   │   │   │   ├── donut-count-3.svg
+│   │   │   │   ├── donut-count-4.svg
+│   │   │   │   ├── donut-sum.svg
+│   │   │   │   ├── pie-count-1.svg
+│   │   │   │   ├── pie-count-2.svg
+│   │   │   │   ├── pie-count-3.svg
+│   │   │   │   ├── pie-count-4.svg
+│   │   │   │   ├── pie-sum.svg
+│   │   │   │   ├── relative-areastack-replace-na-x.svg
+│   │   │   │   ├── relative-areastack-replace-na-xy.svg
+│   │   │   │   ├── relative-areastack-replace-na-y.svg
+│   │   │   │   ├── relative-areastack-replace-na-yx.svg
+│   │   │   │   ├── relative-areastack-x.svg
+│   │   │   │   ├── relative-areastack-xy.svg
+│   │   │   │   ├── relative-areastack-y.svg
+│   │   │   │   ├── relative-areastack-yx.svg
+│   │   │   │   ├── relative-barstack-no-x.svg
+│   │   │   │   ├── relative-barstack-x.svg
+│   │   │   │   ├── relative-barstack-xy.svg
+│   │   │   │   ├── relative-barstack-y.svg
+│   │   │   │   └── relative-barstack-yx.svg
+│   │   │   ├── add-stats/
+│   │   │   │   ├── add-grouped-stats-asterisks-bonferroni.svg
+│   │   │   │   ├── add-grouped-stats-pvalue-bonferroni.svg
+│   │   │   │   ├── add-grouped-stats-pvalue.svg
+│   │   │   │   ├── add-stats-asterisks-ref-group-bonferroni.svg
+│   │   │   │   ├── add-stats-pvalue-ref-group-bonferroni.svg
+│   │   │   │   └── add-stats-pvalue-ref-group.svg
+│   │   │   ├── adjust/
+│   │   │   │   ├── adjust-axes-limits-1.svg
+│   │   │   │   ├── adjust-axes-limits-2.svg
+│   │   │   │   ├── adjust-axes-limits-3.svg
+│   │   │   │   ├── adjust-axes-title-x.svg
+│   │   │   │   ├── adjust-axes-title-y.svg
+│   │   │   │   ├── adjust-colors-after-reorder.svg
+│   │   │   │   ├── adjust-colors-before-rename.svg
+│   │   │   │   ├── adjust-colors-before-reorder.svg
+│   │   │   │   ├── adjust-colors.svg
+│   │   │   │   ├── adjust-legend-title-and-position.svg
+│   │   │   │   ├── adjust-legend-title.svg
+│   │   │   │   ├── caption-font.svg
+│   │   │   │   ├── legend-title-font.svg
+│   │   │   │   ├── plot-area-size-na.svg
+│   │   │   │   ├── plot-area-size-width-and-height.svg
+│   │   │   │   ├── plot-area-size-width.svg
+│   │   │   │   ├── plot-title-font.svg
+│   │   │   │   ├── plotmath-expression-caption.svg
+│   │   │   │   ├── plotmath-expression-legend-title.svg
+│   │   │   │   ├── plotmath-expression-title.svg
+│   │   │   │   ├── plotmath-expression-x-axis-labels.svg
+│   │   │   │   ├── plotmath-expression-x-axis-title.svg
+│   │   │   │   ├── plotmath-expression-y-axis-title.svg
+│   │   │   │   ├── x-axis-title-font.svg
+│   │   │   │   └── y-axis-title-font.svg
+│   │   │   ├── helpers/
+│   │   │   │   ├── after-tidyplot-conversion.svg
+│   │   │   │   ├── before-tidyplot-conversion.svg
+│   │   │   │   └── modification-after-tidyplot-conversion.svg
+│   │   │   └── labels/
+│   │   │       ├── combined-color.svg
+│   │   │       ├── combined-x.svg
+│   │   │       ├── combined-y.svg
+│   │   │       ├── rename-color.svg
+│   │   │       ├── rename-x.svg
+│   │   │       ├── rename-y.svg
+│   │   │       ├── reorder-color.svg
+│   │   │       ├── reorder-x.svg
+│   │   │       ├── reorder-y.svg
+│   │   │       ├── reverse-color.svg
+│   │   │       ├── reverse-x.svg
+│   │   │       ├── reverse-y.svg
+│   │   │       ├── sort-color-1.svg
+│   │   │       ├── sort-color-2.svg
+│   │   │       ├── sort-x-1.svg
+│   │   │       ├── sort-x-2.svg
+│   │   │       ├── sort-y-1.svg
+│   │   │       └── sort-y-2.svg
+│   │   ├── test-add-annotation.R
+│   │   ├── test-add-general.R
+│   │   ├── test-add-heatmap.R
+│   │   ├── test-add-misc.R
+│   │   ├── test-add-points.R
+│   │   ├── test-add-proportional.R
+│   │   ├── test-add-stats.R
+│   │   ├── test-adjust.R
+│   │   ├── test-helpers.R
+│   │   └── test-labels.R
+│   └── testthat.R
+├── vignettes/
+│   ├── articles/
+│   │   ├── Advanced-plotting.Rmd
+│   │   ├── Color-schemes.Rmd
+│   │   └── Visualizing-data.Rmd
+│   └── tidyplots.Rmd
+├── .Rbuildignore
+├── _pkgdown.yml
+├── cran-comments.md
+├── DESCRIPTION
+├── LICENSE
+├── LICENSE.md
+├── NAMESPACE
+├── NEWS.md
+├── README.md
+├── README.Rmd
+└── tidyplots.Rproj
+
+File Contents:
+--------------
+File: .\README.Rmd
+--------------------------------------------------
+Content of .\README.Rmd:
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  results = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  fig.align = "center",
+  dpi = 300,
+  fig.width = 5,
+  fig.height = 2.5,
+  fig.path = "man/figures/README-"
+)
+```
+
+# tidyplots <a href="https://jbengler.github.io/tidyplots/"><img src="man/figures/logo.svg" align="right" height="139" alt="tidyplots website" /></a>
+
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/jbengler/tidyplots/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jbengler/tidyplots/actions/workflows/R-CMD-check.yaml)
+[![CRAN status](https://www.r-pkg.org/badges/version/tidyplots)](https://CRAN.R-project.org/package=tidyplots)
+<!-- badges: end -->
+
+The goal of `tidyplots` is to streamline the creation of publication-ready plots for scientific papers. It allows to gradually add, remove and adjust plot components using a consistent and intuitive syntax.
+
+## Installation
+
+You can install the released version of tidyplots from [CRAN](https://cran.r-project.org/) with:
+``` r
+install.packages("tidyplots")
+```
+
+And the development version from [GitHub](https://github.com/) with:
+``` r
+# install.packages("devtools")
+devtools::install_github("jbengler/tidyplots")
+```
+
+## Usage
+
+Here are some examples. Also have a look at the [getting started guide](https://jbengler.github.io/tidyplots/articles/tidyplots.html) and the [full documentation](https://jbengler.github.io/tidyplots/reference/).
+
+```{r}
+library(tidyplots)
+
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  add_sem_errorbar() %>% 
+  add_data_points_beeswarm()
+```
+
+```{r}
+energy %>% 
+  tidyplot(x = year, y = energy, color = energy_source) %>% 
+  add_barstack_absolute()
+```
+
+```{r}
+energy %>% 
+  dplyr::filter(year %in% c(2005, 2010, 2015, 2020)) %>% 
+  tidyplot(y = energy, color = energy_source) %>% 
+  add_donut() %>% 
+  split_plot(by = year)
+```
+
+```{r}
+energy_week %>% 
+  tidyplot(x = date, y = power, color = energy_source) %>% 
+  add_areastack_absolute()
+```
+
+```{r}
+energy_week %>% 
+  tidyplot(x = date, y = power, color = energy_source) %>% 
+  add_areastack_relative()
+```
+
+```{r}
+study %>% 
+  tidyplot(x = group, y = score, color = dose) %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  add_mean_dash() %>% 
+  add_mean_value()
+```
+
+```{r}
+time_course %>%
+  tidyplot(x = day, y = score, color = treatment) %>%
+  add_mean_line() %>%
+  add_mean_dot() %>%
+  add_sem_ribbon()
+```
+
+```{r}
+climate %>%
+  tidyplot(x = month, y = year, color = max_temperature) %>%
+  add_heatmap()
+```
+
+```{r, fig.height=3}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_boxplot() %>% 
+  add_test_pvalue(ref.group = 1)
+```
+
+```{r, fig.height=3.2}
+gene_expression %>% 
+  dplyr::filter(external_gene_name %in% c("Apol6", "Col5a3", "Vgf", "Bsn")) %>% 
+  tidyplot(x = condition, y = expression, color = sample_type) %>% 
+  add_mean_dash() %>% 
+  add_sem_errorbar() %>% 
+  add_data_points_beeswarm() %>% 
+  add_test_asterisks(hide_info = TRUE) %>% 
+  remove_x_axis_title() %>% 
+  split_plot(by = external_gene_name)
+```
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  add_sem_errorbar() %>% 
+  add_data_points_beeswarm() %>% 
+  view_plot(title = "Default color scheme: 'friendly'") %>% 
+  adjust_colors(colors_discrete_apple) %>% 
+  view_plot(title = "Alternative color scheme: 'apple'")
+```
+
+## Documentation
+
+- [Package index](https://jbengler.github.io/tidyplots/reference/)  
+Overview of all tidyplots functions
+
+- [Get started](https://jbengler.github.io/tidyplots/articles/tidyplots.html)  
+Getting started guide
+
+- [Visualizing data](https://jbengler.github.io/tidyplots/articles/Visualizing-data.html)  
+Article with examples for common data visualizations
+
+- [Advanced plotting](https://jbengler.github.io/tidyplots/articles/Advanced-plotting.html)  
+Article about advanced plotting techniques and workflows
+
+- [Color schemes](https://jbengler.github.io/tidyplots/articles/Color-schemes.html)  
+Article about the use of color schemes
+
+## Acknowledgements
+
+I would like to thank Lars Binkle-Ladisch for our insightful discussions and for consistently challenging my decisions regarding the naming of functions and their arguments.
+
+Many thanks to the R and tidyverse communities. tidyplots is built upon their software and coding paradigms, and it would not have been possible without their contributions.
+
+tidyplots relies on several fantastic packages that handle all the heavy lifting behind the scenes. These include 
+    cli,
+    dplyr,
+    forcats,
+    ggbeeswarm,
+    ggplot2,
+    ggpubr,
+    ggrastr,
+    ggrepel,
+    glue,
+    Hmisc,
+    htmltools,
+    lifecycle,
+    patchwork,
+    purrr,
+    rlang,
+    scales,
+    stringr,
+    tidyr, and
+    tidyselect.
+
+
+File: vignettes\tidyplots.Rmd
+--------------------------------------------------
+Content of vignettes\tidyplots.Rmd:
+---
+title: "Get started"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Get started}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  results = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  fig.align = "center",
+  fig.width = 5,
+  fig.height = 2.6,
+  dpi = 300
+)
+```
+
+::: {.lead}
+This getting started guide aims to empower individuals without a programming background to engage in code-based plotting with tidyplots. We will start by covering essential software tools and discussing data preparation. Next, we will introduce the tidyplots workflow, which includes adding, removing, and adjusting plot components. Finally, we will showcase the application of themes and multiplot layouts.
+:::
+
+# Prerequisites
+
+You never generated code-based scientific plots? Great to have you here! To get you started, we will install a couple of software tools to setup your new working environment.
+
+## Install R and RStudio Desktop
+
+We will be using the programming language R and the software RStudio Desktop, which serves as an editor for your code but also comes with a bunch of additional features.
+
+1. Download and install [R](https://cran.r-project.org) for your operating system. On Windows, choose the _base_ version.
+2. Download and install [RStudio Desktop](https://posit.co/download/rstudio-desktop/)
+
+For more information about R programming have a look at the free online book [Hands-On Programming with R](https://rstudio-education.github.io/hopr/) by Garrett Grolemund, which has a chapter with detailed [installation instructions](https://rstudio-education.github.io/hopr/starting.html). For a quick video tour of the RStudio Desktop user interface check out [RStudio for the Total Beginner](https://www.youtube.com/watch?v=FIrsOBy5k58).
+
+## Install packages
+
+After opening RStudio, you will find your R console in the lower left corner. All code you enter in the console will be directly executed by R. Let's start by installing some essential packages. Packages deliver additional functionality that is not built into base R.
+
+```{r eval=FALSE}
+install.packages("tidyverse")
+install.packages("tidyplots")
+```
+
+# Data preparation
+
+Before starting to plot, the first thing is to ensure that your data is _tidy_. More formally, in tidy data
+
+1. each _variable_ must have its own column
+2. each _observation_ must have its own row and
+3. each _value_ must have its own cell
+
+For more details about tidy data analysis have a look at the free online book [R for Data Science](https://r4ds.hadley.nz) by Hadley Wickham, which has a chapter dedicated to [tidy data](https://r4ds.hadley.nz/data-tidy).
+
+tidyplots comes with a number of tidy demo dataset that are ready to use for plotting. We start by loading the tidyplots package and have a look at the `study` dataset.
+
+```{r message=TRUE, results='markup'}
+library(tidyplots)
+study
+```
+
+As you can see, the `study` dataset consists of a table with 7 columns, also called _variables_, and 20 rows, also called _observations_. The study participants received 4 different kinds of `treatment` (A, B, C, or D) and a `score` was measured to assess treatment success.
+
+# Plotting
+
+Now it is time for the fun part! Make sure that you loaded the tidyplots package. This needs to be done once for every R session.
+
+```{r eval=FALSE}
+library(tidyplots)
+```
+
+Then we start with the `study` dataset and pipe it into the `tidyplot()` function.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score)
+```
+
+And here it is, your first tidyplot! Admittedly, it still looks a little bit empty. We will take care of this in a second. But first let's have a closer look at the code above.
+
+In the first line we start with the `study` dataset. The `%>%` is called a _pipe_ and makes sure, that the output of the first line is handed over as input to the next line. In the second line, we generate the tidyplot and specify which variables we want to use for the x and y-axis using the `x` and `y` arguments of the `tidyplot()` function.
+
+_Tip: The keyboard shortcut for the pipe is `Cmd` + `Shift` + `M` on the Mac and `Ctrl` + `Shift` + `M` on Windows._
+
+## Add
+
+Next, let's add some more elements to the plot. This is done by using a family of functions that all start with `add_`. For example, we can add the data points by adding one more line to the code. Note, that we need a `%>%` at the end of each line, where the output should be piped into the next line. When you combine multiple lines like this, you have generated a _pipeline_.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score) %>% 
+  add_data_points()
+```
+
+Of course, you do not have to stop here. There are many `add_*()` functions you can choose from. An overview of all function in the tidyplots package can be found in the [Package index](https://jbengler.github.io/tidyplots/reference/index.html).
+
+For now, let's add some bars to the plot. As soon as you start typing "add" in RStudio you should see a little window next to your courser that shows all available function that start with "add" and can thus be used to build up your plot. You can also manually trigger the auto-completion window by hitting the `tab` key.
+
+In tidyplots, function names that start with `add_` usually continue with the statistical entity to plot, e.g. `mean`, `median`, `count`, etc. As a next piece, you decide which graphical representation to use, e.g. `bar`, `dash`, `line` etc. In our example we choose `add_mean_bar()` to show the mean value of each treatment group represented as a bar.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score) %>% 
+  add_data_points() %>% 
+  add_mean_bar(alpha = 0.4)
+```
+
+One thing to note here is that I added `alpha = 0.4` as a argument to the `add_mean_bar()` function. This adds a little transparency to the bars and results in a lighter blue color in comparison to the data points.
+
+Some people might do not like bars so much. So let's exchange the `bar` for a `dash`. And while we are on it, let's add the standard error of the mean `sem`, represented as error bar.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score) %>% 
+  add_data_points() %>% 
+  add_mean_dash() %>% 
+  add_sem_errorbar()
+```
+
+I think by now you got the principle. You can just keep adding layers until your plot has all the elements you need.
+
+But there is one more building block that we need to cover and that is color. Color is a very powerful way to encode information in a plot. As colors can encode _variables_ in a similar way as axes, the argument `color` needs to be to provided in the initial call of the `tidyplot()` function.
+
+```{r}
+study %>% 
+  tidyplot(x = group, y = score, color = dose) %>% 
+  add_data_points() %>% 
+  add_mean_dash() %>% 
+  add_sem_errorbar()
+```
+
+As you can see, `color` acts as a way to group the data by a third _variable_, thus complementing the `x` and `y` axis.
+
+Although there are many more `add_*()` functions available, I will stop here and leave you with the [Package index](https://jbengler.github.io/tidyplots/reference/index.html) and the article about [Visualizing data](https://jbengler.github.io/tidyplots/articles/Visualizing-data.html) for further inspiration.
+
+## Remove
+
+Besides adding plot elements, you might want to remove certain parts of the plot. This can be achieved with the `remove_*()` family of functions. For example, you might want to remove the color legend title, or in some rare cases even the entire y-axis.
+
+```{r}
+study %>% 
+  tidyplot(x = group, y = score, color = dose) %>% 
+  add_data_points() %>% 
+  add_mean_dash() %>% 
+  add_sem_errorbar() %>% 
+  remove_legend_title() %>% 
+  remove_y_axis()
+```
+
+More `remove_*()` functions can be found in the [Package index](https://jbengler.github.io/tidyplots/reference/index.html).
+
+## Adjust
+
+After you have assembled your plot, you often want to tweak some details about how the plot or its components are displayed. For this task, tidyplots provides a number of `adjust_*()` functions.
+
+Let's start with this plot.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_data_points() %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  add_sem_errorbar()
+```
+
+When preparing figures for a paper, you might want ensure, that all plots have a consistent size. The default in tidyplots is a width of 50 mm and a height of 50 mm. Please note that these values refer to size of the _plot area_, which is the area enclosed by the x and y-axis. Therefore labels, titles, and legends are not counting towards the _plot area size_.
+
+This is perfect to achieve a consistent look, which is most easily done by selecting a consistent `height` across plots, while the `width` can vary depending on the number of categories in the x-axis.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_data_points_beeswarm(shape = 1) %>%
+  add_mean_bar(alpha = 0.4) %>% 
+  add_sem_errorbar() %>% 
+  adjust_size(width = 20, height = 20)
+```
+
+Another common adjustment is to change the titles of the plot, axes, or legend. For this we will use the function `adjust_title()` and friends.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_data_points() %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  add_sem_errorbar() %>% 
+  adjust_title("This is my fantastic plot title") %>%
+  adjust_x_axis_title("Treatment group") %>%
+  adjust_y_axis_title("Disease score") %>%
+  adjust_legend_title("") %>%
+  adjust_caption("Here goes the caption")
+```
+
+Note that I removed the legend title by setting it to an empty string `adjust_legend_title("")`. This is alternative to `remove_legend_title()`, however the result is not exactly the same. I am sure you will figure out the difference.
+
+Another common task is to adjust the colors in your plot. You can do this using the `adjust_colors()` function.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_data_points() %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  add_sem_errorbar() %>% 
+  adjust_colors(new_colors = c("#644296","#F08533","#3B78B0", "#D1352C"))
+```
+
+You can also use the color schemes, that are built into tidyplots. To learn more about these color schemes have a look at the article [Color schemes](https://jbengler.github.io/tidyplots/articles/Color-schemes.html).
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_data_points() %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  add_sem_errorbar() %>% 
+  adjust_colors(new_colors = colors_discrete_seaside)
+```
+
+**Rename, reorder, sort, and reverse**
+
+A special group of adjust functions deals with the _data labels_ in your plot. These function are special because they need to modify the underlying data of the plot. Moreover, they do not start with `adjust_` but with `rename_`, `reorder_`, `sort_`, and `reverse_`.
+
+For example, to rename the data labels for the `treatment` variable on the x-axis, you can do this.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_data_points() %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  add_sem_errorbar() %>% 
+  rename_x_axis_labels(new_names = c("A" = "This",
+                                     "B" = "is",
+                                     "C" = "totally",
+                                     "D" = "new"))
+```
+
+Note that we provide a _named character vector_ to make it clear which old label should be replace with which new label.
+
+The remaining functions, starting with `reorder_`, `sort_`, and `reverse_`, do not change the name of the label but their order in the plot.
+
+For example, you can bring the treatment "D" and "C" to the front.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_data_points() %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  add_sem_errorbar() %>% 
+  reorder_x_axis_labels("D", "C")
+```
+
+Sort the treatments by their score.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_data_points() %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  add_sem_errorbar() %>% 
+  sort_x_axis_labels()
+```
+
+Or simply reverse the order of the labels.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_data_points() %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  add_sem_errorbar() %>% 
+  reverse_x_axis_labels()
+```
+
+Of course, there are many more `adjust_` functions that you can find in the [Package index](https://jbengler.github.io/tidyplots/reference/index.html).
+
+## Themes
+
+Themes are a great way to modify the look an feel of your plot without changing the representation of the data. You can stay with the default tidyplots theme.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_data_points() %>% 
+  add_sem_errorbar() %>% 
+  add_mean_dash() %>% 
+  theme_tidyplot()
+```
+
+Or try something more like ggplot2.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_data_points() %>% 
+  add_sem_errorbar() %>% 
+  add_mean_dash() %>% 
+  theme_ggplot2()
+```
+
+Or something more minimal.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_data_points() %>% 
+  add_sem_errorbar() %>% 
+  add_mean_dash() %>% 
+  theme_minimal_y() %>% 
+  remove_x_axis_line()
+```
+
+## Split
+
+When you have a complex dataset, you might want split the plot into multiple subplots. In tidyplots, this can be done with the function `split_plot()`.
+
+Starting with the `study` dataset, you could plot the `score` against the treatment `group` and split this plot by `dose` into a high dose and a low dose plot.
+
+```{r}
+study %>% 
+  tidyplot(x = group, y = score, color = group) %>% 
+  add_data_points() %>% 
+  add_sem_errorbar() %>% 
+  add_mean_dash() %>% 
+  split_plot(by = dose)
+```
+
+## Output
+
+The classical way to output a plot is to write it to a PDF or PNG file. This can be easily done by piping the plot into the function `save_plot()`.
+
+```{r eval=FALSE}
+study %>% 
+  tidyplot(x = group, y = score, color = group) %>% 
+  add_data_points() %>% 
+  add_sem_errorbar() %>% 
+  add_mean_dash() %>% 
+  save_plot("my_plot.pdf")
+```
+
+Conveniently, `save_plot()` also gives back the plot it received, allowing it to be used in the middle of a pipeline. If `save_plot()` is a the end of pipeline, the plot will be rendered on screen, providing a visual confirmation of what was saved to file.
+
+# What's more?
+
+To dive deeper into code-based plotting, here a couple of resources.
+
+## tidyplots documentation
+
+- [Package index](https://jbengler.github.io/tidyplots/reference/index.html)  
+Overview of all tidyplots functions
+
+- [Get started](https://jbengler.github.io/tidyplots/articles/tidyplots.html)  
+Getting started guide
+
+- [Visualizing data](https://jbengler.github.io/tidyplots/articles/Visualizing-data.html)  
+Article with examples for common data visualizations
+
+- [Advanced plotting](https://jbengler.github.io/tidyplots/articles/Advanced-plotting.html)  
+Article about advanced plotting techniques and workflows
+
+- [Color schemes](https://jbengler.github.io/tidyplots/articles/Color-schemes.html)  
+Article about the use of color schemes
+
+## Other resources
+
+- [Hands-On Programming with R](https://rstudio-education.github.io/hopr/)   
+Free online book by Garrett Grolemund
+
+- [R for Data Science](https://r4ds.hadley.nz)  
+Free online book by Hadley Wickham
+
+- [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)  
+Free online book by Claus O. Wilke
+
+
+File: vignettes\articles\Advanced-plotting.Rmd
+--------------------------------------------------
+Content of vignettes\articles\Advanced-plotting.Rmd:
+---
+title: "Advanced plotting"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  results = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  fig.align = "center",
+  fig.width = 5,
+  fig.height = 2.6,
+  dpi = 300
+)
+```
+
+::: {.lead}
+In this article, we will explore advanced plotting techniques offered in tidyplots. We will cover the rasterization of plot components, data subsetting for highlighting selected data points, and the construction of powerful plotting pipelines. Moreover, we will discuss the visualization of paired and missing data, generate multiplot layouts and introduce the concepts of plot orientation, dodging, coloring, plot area padding, and more. We will conclude by discussing the compatibility of tidyplots with ggplot2.
+:::
+
+# Rasterization
+
+Generally, vector graphics like PDF and SVG are superior to raster images like PNG and JPG because they maintain high quality and sharpness at any scale. This makes them ideal for printing, resizing, and zooming without losing detail.
+
+However, in plots with many data points, such as busy scatter plots or heatmaps, the presence of too many vector shapes can slow down performance without providing extra information. In these cases, rasterization of individual layers of the plot can be beneficial, as it reduces file size and rendering time, making the graphs more manageable and quicker to load or display.
+
+Ideally, the rasterization only affects the problematic layers of the plot, while the rest of the plot still uses vector shapes. In tidyplots this can be achieved with the arguments `rasterize = TRUE` and `rasterize_dpi` which are available in `add_heatmap()` and `add_data_points()` functions.
+
+In the examples below I intentionally chose a low resolution of of 30 to 50 dpi, to make the rastering more obvious. A typical resolution for print would be 300 dpi.
+
+```{r, fig.asp=0.9}
+library(tidyplots)
+
+gene_expression %>%
+  tidyplot(x = sample, y = external_gene_name, color = expression) %>%
+  add_heatmap(scale = "row", rasterize = TRUE, rasterize_dpi = 30) %>%
+  adjust_size(height = 100)
+```
+
+And here another example using `add_data_points()`.
+
+```{r}
+study %>%
+  tidyplot(x = treatment, y = score, color = treatment) %>%
+  add_data_points(rasterize = TRUE, rasterize_dpi = 50)
+```
+
+# Custom styling
+
+Maintaining a consistent look in graphs throughout a paper enhances readability, supports accurate comparisons, and improves the communication of the paper's findings.
+
+In tidyplots you can create a custom style by defining a functional sequence like the one below, called `my_style()`.
+
+```{r}
+my_style <- 
+  . %>% 
+  adjust_colors(colors_continuous_bluepinkyellow) %>% 
+  adjust_font(family = "mono", face = "bold") %>% 
+  remove_x_axis_ticks() %>% 
+  remove_y_axis_ticks()
+```
+
+Each individual plot can then be piped into `my_style()` as the final step.
+
+```{r}
+study %>% 
+  tidyplot(group, score, color = treatment) %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  add_sem_errorbar() %>% 
+  add_data_points_beeswarm() %>% 
+  my_style()
+energy_week %>% 
+  tidyplot(date, power, color = energy_source) %>% 
+  add_areastack_relative() %>% 
+  my_style()
+```
+
+# Data subsetting
+
+In general, data wrangling should be done before plotting graphs, including subsetting the data to include only the points that should appear in the plot. 
+
+However, there are times when you have one large data frame that serves as the basis for multiple plots or when you want to highlight specific parts of the data while showing the entire dataset in the background. For these situations, tidyplots enables subsetting the data during the plotting process.
+
+Let's say you have a scatter plot of animals displaying their weight and size, and you want to highlight in red all animals larger than 300 cm.
+
+```{r}
+animals %>%
+  tidyplot(x = weight, y = size) %>%
+  add_data_points() %>% 
+  add_data_points(data = filter_rows(size > 300), color = "red")
+```
+
+In addition, you might want to show the name of the three animals with the highest body weight.
+
+```{r}
+animals %>%
+  tidyplot(x = weight, y = size) %>%
+  add_data_points() %>% 
+  add_data_points(data = filter_rows(size > 300), color = "red") %>% 
+  add_data_labels_repel(data = max_rows(weight, n = 3), label = animal, color = "black")
+```
+
+You can also adjust the shape used for highlighting.
+
+```{r}
+animals %>% 
+  tidyplot(x = weight, y = size) %>% 
+  add_data_points() %>% 
+  add_data_points(data = max_rows(weight, n = 3), color = "red", shape = 1, size = 3)
+```
+
+Combining this with the previously described rastering of individual layers, you can choose to raster all data points, while keeping the highlight as a vector shape.
+
+```{r}
+animals %>% 
+  tidyplot(x = weight, y = size) %>% 
+  add_data_points(rasterize = TRUE, rasterize_dpi = 50) %>% 
+  add_data_points(data = max_rows(weight, n = 3), color = "red", shape = 1, size = 3)
+```
+
+# Plotting pipelines
+
+A unique feature of tidyplots is, that you can view and save multiple stages or variations of a plot in a single pipeline by using `view_plot()` and `save_plot()`.
+
+Let's say you gradually build up a plot but want to save all intermediate stages as individual PDF files.
+
+```{r eval=FALSE}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_mean_dash() %>% 
+  save_plot(filename = "stage_1.pdf") %>%
+  add_sem_errorbar() %>% 
+  save_plot(filename = "stage_2.pdf") %>% 
+  add_data_points_beeswarm() %>% 
+  save_plot(filename = "stage_3.pdf")
+```
+
+Or you have a big data frame with multiple genes and you quickly want to generate plots for two of them.
+
+```{r}
+gene_expression %>% 
+  tidyplot(x = condition, y = expression, color = sample_type) %>% 
+  add_mean_dash() %>% 
+  add_sem_errorbar() %>% 
+  add_data_points_beeswarm() %>% 
+  view_plot(data = filter_rows(external_gene_name == "Apol6"), title = "Apol6") %>% 
+  view_plot(data = filter_rows(external_gene_name == "Bsn"), title = "Bsn")
+```
+
+Note that in this example, the `data` argument together with the `filter_rows()` function is used to subset the data to one gene at a time. In addition, the `title` argument lets you include a plot title to avoid confusing individual plots.
+
+# Paired data
+
+When dealing with paired data, you might wish to connect paired data points. In the example below, all participants switched the treatment group after a certain time period. Thus for each participant the dataset contains a score "on placebo" and a score "on treatment". 
+
+The connecting line can be added by using the `group` argument of `add_line()` to specify the grouping variable.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score, color = group) %>% 
+  add_mean_dash() %>% 
+  add_sem_errorbar() %>% 
+  add_line(group = participant, color = "grey") %>% 
+  add_data_points()
+```
+
+As a final step, you might want to rearrange the order of the x-axis labels to have grouped data points side by side.
+
+```{r}
+study %>%
+  tidyplot(x = treatment, y = score, color = group) %>%
+  add_mean_dash() %>% 
+  add_sem_errorbar() %>%
+  add_data_points() %>%
+  add_line(group = participant, color = "grey") %>%
+  reorder_x_axis_labels("A", "C")
+```
+
+# Missing data
+
+Proper handling missing values (`NA`) is an essential feature of R. It helps to prevent skewed results and make more reliable inferences.
+
+However, sometimes the handling of missing values can lead to unanticipated results. For example, when looking at the proportions of having zero, two, four or six legs in a (non-representative) dataset of animals, `add_barstack_absolute()` delivers some interesting insights.
+
+```{r}
+animals %>%
+  tidyplot(x = number_of_legs, color = family) %>%
+  add_barstack_absolute()
+```
+
+While mammals in this dataset have either zero, two or four legs, insects consistently have six legs, respectively. Now, when looking at the same data with `add_areastack_absolute()` the picture becomes a little obscure.
+
+```{r}
+animals %>%
+  tidyplot(x = number_of_legs, color = family) %>%
+  add_areastack_absolute()
+```
+
+What happened? Because all insects have six legs, the function could not find another point on the x-axis to draw a connecting line and plot the area underneath. As a result, insects completely disappeared. The same happened to fish and birds, which always have zero and two legs, respectively.
+
+What the function needs is the information that insects with less than six legs are missing in the dataset because they do not exist. Thus it is save to replace the information `count = NA` with the information `count = 0`.
+
+You can fix the plot by setting `replace_na = TRUE`.
+
+```{r}
+animals %>%
+  tidyplot(x = number_of_legs, color = family) %>%
+  add_areastack_absolute(replace_na = TRUE)
+```
+
+# Multiplot layouts
+
+Often times you have to generate identical plots for many different subsets of the same dataset. For example, you might look at a gene expression dataset like `gene_expression` including many individual genes.
+
+In such a case you can build your plot as usual using the entire dataset and then split the plot by the gene name using the `split_plot()` function.
+
+```{r}
+gene_expression %>% 
+  # filter down to 4 genes for demonstration
+  dplyr::filter(external_gene_name %in% c("Apol6","Bsn","Vgf","Mpc2")) %>% 
+  # start plotting
+  tidyplot(x = condition, y = expression, color = sample_type) %>% 
+  add_mean_dash() %>% 
+  add_sem_errorbar() %>% 
+  add_data_points_beeswarm() %>% 
+  add_test_asterisks(hide_info = TRUE) %>% 
+  split_plot(by = external_gene_name, ncol = 2, nrow = 2)
+```
+
+In case there are too many genes to fit on one page, you can also spread them across a multipage PDF. To do so, just specify the maximum number of columns `ncol` and rows `nrow` you want to have on one page.
+
+```{r eval=FALSE}
+gene_expression %>% 
+  tidyplot(x = condition, y = expression, color = sample_type) %>% 
+  add_mean_dash() %>% 
+  add_sem_errorbar() %>% 
+  add_data_points_beeswarm() %>% 
+  add_test_asterisks(hide_info = TRUE) %>% 
+  split_plot(by = external_gene_name, ncol = 3, nrow = 3) %>% 
+  save_plot("test.pdf")
+```
+
+# Orientation
+
+Some plot elements like bars, areas or curve fits have an orientation that needs to be inferred from the variables mapped to the `x` and `y` axis. For example, the following code results in vertical bars.
+
+```{r}
+animals %>% 
+  tidyplot(x = diet, y = weight) %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  add_sem_errorbar()
+```
+
+As expected, swapping the `x` and `y` arguments results in horizontal bars.
+
+```{r}
+animals %>% 
+  tidyplot(x = weight, y = diet) %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  add_sem_errorbar()
+```
+
+In most cases the auto-detection of the orientation works well. In case it does not fit your needs, you can manually set the `orientation` to either `"x"` or `"y"`.
+
+```{r}
+time_course %>% 
+  tidyplot(x = score, y = day) %>% 
+  add_curve_fit(orientation = "x") %>% 
+  add_title("orientation = x")
+time_course %>% 
+  tidyplot(x = score, y = day) %>% 
+  add_curve_fit(orientation = "y") %>% 
+  add_title("orientation = y")
+```
+
+# Padding
+
+Per default, tidyplots gives the data points a little bit of extra space towards the border of the plot area.
+
+```{r}
+animals %>% 
+  tidyplot(x = weight, y = speed) %>% 
+  add_data_points()
+```
+
+This _padding_, also known as _expansion_ in ggplot2, is 0.05 by default and can be changes using the `adjust_padding()` function.
+
+```{r}
+animals %>% 
+  tidyplot(x = weight, y = speed) %>% 
+  add_data_points() %>% 
+  adjust_padding(top = 0.2, right = 0.2, bottom = 0.2, left = 0.2)
+```
+
+To completely remove the padding, you can use the `remove_padding()` function. However, note that this will cause extreme values to fall onto the border of the plot area and be partially cut off.
+
+```{r}
+animals %>% 
+  tidyplot(x = weight, y = speed) %>% 
+  add_data_points() %>% 
+  remove_padding()
+```
+
+When using certain types of plot components, tidyplots automatically adapts the padding to improve the look of the plot. For example, in `bar` and `area` plots the padding between the `bar` or `area` and the axis is removed.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  add_sem_errorbar() %>% 
+  add_data_points()
+```
+
+You can re-introduce the bottom padding like so.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  add_sem_errorbar() %>% 
+  add_data_points() %>% 
+  adjust_padding(bottom = 0.05)
+```
+
+# Dodging
+
+Dodging refers to the distance between grouped objects. In plots with at least one discrete axis the default is 0.8 and looks like this.
+
+```{r}
+study %>% 
+  tidyplot(x = group, y = score, color = dose) %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  add_sem_errorbar() %>% 
+  add_data_points()
+```
+
+Decreasing the `dodge_width` in the `tidyplots()` function call decreases the spacing between grouped bars.
+
+```{r}
+study %>% 
+  tidyplot(x = group, y = score, color = dose, dodge_width = 0.4) %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  add_sem_errorbar() %>% 
+  add_data_points()
+```
+
+Setting `dodge_width = 0` results in completely overlapping positions.
+
+```{r}
+study %>% 
+  tidyplot(x = group, y = score, color = dose, dodge_width = 0) %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  add_sem_errorbar() %>% 
+  add_data_points()
+```
+
+In plots with two continuous axes the default `dodge_width` is zero. However, you can always override the default using the `dodge_width` argument of the `tidyplot()` function.
+
+```{r}
+time_course %>% 
+  tidyplot(x = day, y = score, color = treatment) %>% 
+  add_mean_line() %>% 
+  add_mean_dot()
+```
+
+# Coloring
+
+tidyplots follows are quite straight forward approach when dealing with color. The variable that should be encoded by colors is passed via the `color` argument to the `tidyplot()` function.
+
+```{r}
+study %>% 
+  tidyplot(x = group, y = score, color = dose) %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  add_sem_errorbar() %>% 
+  add_data_points()
+```
+
+In ggplot2, the plotting package that underlies tidyplots, colors are little more complicated. ggplot2 distinguishes between the fill color of an object `fill` and the stroke color of an object `color`. Some objects like bars can have both, while other objects like lines just have a stroke `color` but no `fill`.
+
+Usually, tidyplots users do not have to care about these details. Internally, tidyplots matches both `fill` and `color` to the same color. And this is the color that comes in as the `color` argument into the `tidyplot()` function.
+
+In some cases though, you might want to take manual control over the `fill` and stroke `color` of specific objects.
+
+For example, you want to plot a boxplot without the `fill` color.
+
+```{r}
+study %>% 
+  tidyplot(x = group, y = score, color = dose) %>% 
+  add_boxplot(fill = NA)
+```
+
+Or with a black stroke `color`.
+
+```{r}
+study %>% 
+  tidyplot(x = group, y = score, color = dose) %>% 
+  add_boxplot(color = "black")
+```
+
+Or you want to have black text labels.
+
+```{r}
+study %>% 
+  tidyplot(x = group, y = score, color = dose) %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  add_mean_value(color = "black")
+```
+
+# Alpha versus saturation
+
+Sometimes you want to decrease the intensity of your colors.
+
+```{r}
+study %>% 
+  tidyplot(x = group, y = score, color = dose) %>% 
+  add_mean_bar() %>% 
+  theme_minimal_y()
+```
+
+One way to do this is to reduce the opacity by decreasing the alpha argument. Note how the horizontal lines start to shine through the bars.
+
+```{r}
+study %>% 
+  tidyplot(x = group, y = score, color = dose) %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  theme_minimal_y()
+```
+
+In the `add_mean_bar()` family of functions, in `add_violin()` and in `add_boxplots()` functions, tidyplots offers one additional method using the `saturation` argument.
+
+```{r}
+study %>% 
+  tidyplot(x = group, y = score, color = dose) %>% 
+  add_mean_bar(saturation = 0.3) %>% 
+  theme_minimal_y()
+```
+
+Note how here the saturation is decreased without making the bars transparent. Thus, the horizontal lines do not shine through the bars.
+
+# Special characters
+
+When it comes to scientific plots, titles often contain special characters like Greek symbols, subscript or superscript. For this purpose, tidyplots supports _plotmath expressions_.
+
+Besides finding out how to use the [plotmath expression syntax](https://www.rdocumentation.org/packages/grDevices/versions/3.6.2/topics/plotmath), please note that in tidyplots all plotmath expressions need to start and end with a `$` character. Moreover, you can not mix plotmath with plain text in one string, instead the entire string needs to be a valid plotmath expression that includes the plain text.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_data_points() %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  add_sem_errorbar() %>% 
+  adjust_title("$H[2]*O$") %>% 
+  adjust_x_axis_title("$E==m*c^{2}$") %>% 
+  adjust_y_axis_title("$TNF*alpha~level$")
+```
+
+# ggplot2 compatibiliy
+
+tidyplots is built on ggplot2, yet the two packages differ in several key aspects. The most noticeable difference is probably that tidyplots consistently uses the pipe `%>%` to add plot components while ggplot uses `+` .
+
+There is still a certain compatibility of both systems. For example, you can transform a ggplot to tidyplot using the `as_tidyplot()` function.
+
+Also, you can add ggplot code to a tidyplot using the `add()` helper function.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_mean_bar(alpha = 0.4) %>% 
+  add(ggplot2::geom_point())
+```
+
+However, be ready to experience unexpected hiccups, when mixing ggplot and tidyplots, since ensuring compatibility in every edge case was not a priority when developing the tidyplots package.
+
+# What's more?
+
+To dive deeper into code-based plotting, here a couple of resources.
+
+## tidyplots documentation
+
+- [Package index](https://jbengler.github.io/tidyplots/reference/index.html)  
+Overview of all tidyplots functions
+
+- [Get started](https://jbengler.github.io/tidyplots/articles/tidyplots.html)  
+Getting started guide
+
+- [Visualizing data](https://jbengler.github.io/tidyplots/articles/Visualizing-data.html)  
+Article with examples for common data visualizations
+
+- [Advanced plotting](https://jbengler.github.io/tidyplots/articles/Advanced-plotting.html)  
+Article about advanced plotting techniques and workflows
+
+- [Color schemes](https://jbengler.github.io/tidyplots/articles/Color-schemes.html)  
+Article about the use of color schemes
+
+## Other resources
+
+- [Hands-On Programming with R](https://rstudio-education.github.io/hopr/)   
+Free online book by Garrett Grolemund
+
+- [R for Data Science](https://r4ds.hadley.nz)  
+Free online book by Hadley Wickham
+
+- [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)  
+Free online book by Claus O. Wilke
+
+
+File: vignettes\articles\Color-schemes.Rmd
+--------------------------------------------------
+Content of vignettes\articles\Color-schemes.Rmd:
+---
+title: "Color schemes"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  results = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  fig.align = "center",
+  fig.width = 5,
+  fig.height = 2.5,
+  dpi = 300
+)
+
+```
+
+::: {.lead}
+In this article, we will demonstrate the use of color schemes in tidyplots. We will explore the default color schemes that come with tidyplots and are ready to use for plotting. These include schemes for discrete, continuous and diverging variables. To conclude, we will discuss the creation of custom color schemes from hex values.
+:::
+
+# Default color schemes
+
+tidyplots comes with a number of default color schemes. Many of them are adapted from the `viridisLite` and `RColorBrewer` packages. You access them by loading the the tidyplots library and start typing `colors_`. The auto-completion will guide you through a selection of `discrete`, `continuous` and `diverging` schemes.
+
+Let's have a look at the signature scheme of tidyplots `colors_discrete_friendly`, which was designed to work well for people with color vision deficiency. When running the line `colors_discrete_friendly` in the console or within a script, a preview of the scheme will be rendered to the Viewer pane in the lower right of the RStudio Desktop interface.
+
+In essence, tidyplots color schemes are just a character vector of hex colors with a special print method that sends a preview to the RStudio viewer pane.
+
+```{r}
+library(tidyplots)
+colors_discrete_friendly
+```
+
+```{r results='asis', echo=FALSE}
+print(colors_discrete_friendly, return_html = TRUE)
+```
+
+_Tip: You can copy individual hex colors directly from the preview to use them in your script._
+
+## Discrete
+
+Discrete color schemes are meant for categorical variables. The default schemes in tidyplots consist of 5--7 colors. However, if more categories are present in the plot, tidyplots will automatically fill up the gaps between colors to deliver exactly the number that is required for the plot.
+
+Similarly, when more colors are provided than needed, tidyplots will select the required number of colors by attempting to evenly sample from the supplied color vector.
+
+```{r}
+energy %>% 
+  tidyplot(year, energy, color = energy_source) %>% 
+  add_barstack_absolute()
+```
+
+And here are some alternative color schemes.
+
+```{r}
+energy %>% 
+  tidyplot(year, energy, color = energy_source) %>% 
+  add_barstack_absolute() %>% 
+  adjust_colors(colors_discrete_seaside)
+energy %>% 
+  tidyplot(year, energy, color = energy_source) %>% 
+  add_barstack_absolute() %>% 
+  adjust_colors(colors_discrete_friendly_long)
+energy %>% 
+  tidyplot(year, energy, color = energy_source) %>% 
+  add_barstack_absolute() %>% 
+  adjust_colors(colors_discrete_apple)
+energy %>% 
+  tidyplot(year, energy, color = energy_source) %>% 
+  add_barstack_absolute() %>% 
+  adjust_colors(colors_discrete_ibm)
+energy %>% 
+  tidyplot(year, energy, color = energy_source) %>% 
+  add_barstack_absolute() %>% 
+  adjust_colors(colors_discrete_candy)
+energy %>% 
+  tidyplot(year, energy, color = energy_source) %>% 
+  add_barstack_absolute() %>% 
+  adjust_colors(colors_discrete_alger)
+energy %>% 
+  tidyplot(year, energy, color = energy_source) %>% 
+  add_barstack_absolute() %>% 
+  adjust_colors(colors_discrete_rainbow)
+
+```
+
+## Continuous
+
+Continuous color schemes are meant for continuous variables. The default schemes in tidyplots usually consist of 265 colors.
+
+```{r}
+colors_continuous_viridis
+```
+
+```{r results='asis', echo=FALSE}
+print(colors_continuous_viridis, return_html = TRUE)
+```
+
+Here is a use case for a continuous color scheme.
+
+```{r}
+climate %>% 
+  tidyplot(x = month, y = year, color = max_temperature) %>% 
+  add_heatmap()
+```
+
+And here are some alternative color schemes.
+
+```{r}
+climate %>% 
+  tidyplot(x = month, y = year, color = max_temperature) %>% 
+  add_heatmap() %>% 
+  adjust_colors(new_colors = colors_continuous_inferno)
+climate %>% 
+  tidyplot(x = month, y = year, color = max_temperature) %>% 
+  add_heatmap() %>% 
+  adjust_colors(new_colors = colors_continuous_mako)
+climate %>% 
+  tidyplot(x = month, y = year, color = max_temperature) %>% 
+  add_heatmap() %>% 
+  adjust_colors(new_colors = colors_continuous_turbo)
+climate %>% 
+  tidyplot(x = month, y = year, color = max_temperature) %>% 
+  add_heatmap() %>% 
+  adjust_colors(new_colors = colors_continuous_rocket)
+```
+
+## Diverging
+
+Diverging color schemes are meant for continuous variables that have a central point in the middle. A classical example is the blue--white--red gradient used for gene expression heatmaps.
+
+```{r}
+colors_diverging_blue2red
+```
+
+```{r results='asis', echo=FALSE}
+print(colors_diverging_blue2red, return_html = TRUE)
+```
+
+Here is a use case for a diverging color scheme.
+
+```{r, fig.asp=0.9}
+gene_expression %>% 
+  tidyplot(x = sample, y = external_gene_name, color = expression) %>% 
+  add_heatmap(scale = "row") %>%
+  sort_y_axis_labels(direction) %>% 
+  adjust_size(height = 100)
+```
+
+And here are some alternative color schemes.
+
+```{r, fig.asp=0.9}
+gene_expression %>% 
+  tidyplot(x = sample, y = external_gene_name, color = expression) %>% 
+  add_heatmap(scale = "row") %>%
+  sort_y_axis_labels(direction) %>% 
+  adjust_size(height = 100) %>% 
+  adjust_colors(new_colors = colors_diverging_blue2brown)
+gene_expression %>% 
+  tidyplot(x = sample, y = external_gene_name, color = expression) %>% 
+  add_heatmap(scale = "row") %>%
+  sort_y_axis_labels(direction) %>% 
+  adjust_size(height = 100) %>% 
+  adjust_colors(new_colors = colors_diverging_spectral)
+gene_expression %>% 
+  tidyplot(x = sample, y = external_gene_name, color = expression) %>% 
+  add_heatmap(scale = "row") %>%
+  sort_y_axis_labels(direction) %>% 
+  adjust_size(height = 100) %>% 
+  adjust_colors(new_colors = colors_diverging_icefire)
+```
+
+# Custom color schemes
+
+Of course you can also construct custom color schemes using the `new_color_scheme()` function.
+
+```{r}
+my_colors <- 
+  new_color_scheme(c("#ECA669","#E06681","#8087E2","#E2D269"),
+                   name = "my_custom_color_scheme")
+my_colors
+```
+
+```{r results='asis', echo=FALSE}
+print(my_colors, return_html = TRUE)
+```
+
+Than you can use your scheme as input to the `adjust_colors()` function.
+
+```{r}
+energy %>% 
+  tidyplot(year, energy, color = energy_source) %>% 
+  add_barstack_absolute() %>% 
+  adjust_colors(new_colors = my_colors)
+```
+
+Besides creating new schemes, you can also subset and concatenate existing schemes in the exact same way you would do with a regular character string.
+
+```{r}
+colors_discrete_metro[2]
+```
+
+```{r results='asis', echo=FALSE}
+print(colors_discrete_metro[2], return_html = TRUE)
+```
+
+```{r}
+colors_discrete_metro[2:4]
+```
+
+```{r results='asis', echo=FALSE}
+print(colors_discrete_metro[2:4], return_html = TRUE)
+```
+
+```{r}
+c(colors_discrete_metro, colors_discrete_seaside)
+```
+
+```{r results='asis', echo=FALSE}
+print(c(colors_discrete_metro, colors_discrete_seaside), return_html = TRUE)
+```
+
+# What's more?
+
+To dive deeper into code-based plotting, here a couple of resources.
+
+## tidyplots documentation
+
+- [Package index](https://jbengler.github.io/tidyplots/reference/index.html)  
+Overview of all tidyplots functions
+
+- [Get started](https://jbengler.github.io/tidyplots/articles/tidyplots.html)  
+Getting started guide
+
+- [Visualizing data](https://jbengler.github.io/tidyplots/articles/Visualizing-data.html)  
+Article with examples for common data visualizations
+
+- [Advanced plotting](https://jbengler.github.io/tidyplots/articles/Advanced-plotting.html)  
+Article about advanced plotting techniques and workflows
+
+- [Color schemes](https://jbengler.github.io/tidyplots/articles/Color-schemes.html)  
+Article about the use of color schemes
+
+## Other resources
+
+- [Hands-On Programming with R](https://rstudio-education.github.io/hopr/)   
+Free online book by Garrett Grolemund
+
+- [R for Data Science](https://r4ds.hadley.nz)  
+Free online book by Hadley Wickham
+
+- [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)  
+Free online book by Claus O. Wilke
+
+
+File: vignettes\articles\Visualizing-data.Rmd
+--------------------------------------------------
+Content of vignettes\articles\Visualizing-data.Rmd:
+---
+title: "Visualizing data"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  results = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  fig.align = "center",
+  fig.width = 5,
+  fig.height = 2.5,
+  dpi = 300
+)
+
+```
+
+::: {.lead}
+In this article, we will explore the visualization of different types of datasets using tidyplots. We will cover the plotting of raw data points, amounts, and heatmaps, as well as measures for central tendency, dispersion, and uncertainty. We will conclude by visualizing distributions and proportions, and adding statistical comparisons and annotations.
+:::
+
+# Data points
+
+Plotting the raw data points is probably the most bare bone way to visualize a dataset. The corresponding function in tidyplots is called `add_data_points()`.
+
+```{r}
+library(tidyplots)
+
+animals %>% 
+  tidyplot(x = weight, y = size) %>% 
+  add_data_points()
+```
+
+In the above example some data points appear to overlap other points. To account for this so called _overplotting_, you might want to add a thin white border around the points. This is achieved by setting the argument `white_border = TRUE`.
+
+```{r}
+animals %>% 
+  tidyplot(x = weight, y = size) %>% 
+  add_data_points(white_border = TRUE)
+```
+
+Another way is to make the points transparent using the `alpha` argument.
+
+```{r}
+animals %>% 
+  tidyplot(x = weight, y = size) %>% 
+  add_data_points(alpha = 0.4)
+```
+
+Or to change the plotting symbol to an open `shape`.
+
+```{r}
+animals %>% 
+  tidyplot(x = weight, y = size) %>% 
+  add_data_points(shape = 1)
+```
+
+However, data points can also be used to plot a _discrete variable_ against a _continuous variable_.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score) %>% 
+  add_data_points()
+```
+
+To avoid overplotting in this scenario, there are two additional options. You can add some random noise to the y position, also known as _jitter_.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score) %>% 
+  add_data_points_jitter()
+```
+
+Alternatively, you can use an algorithm that keeps the points centered and just moves potentially overlapping points to the sides.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score) %>% 
+  add_data_points_beeswarm()
+```
+
+# Amounts
+
+For some datasets, it makes sense to `count` or `sum` up data points in order to arrive to conclusions. As one example, let's have a look at the `spendings` dataset.
+
+```{r, results='markup'}
+spendings
+```
+
+As you can see, this dataset contains family spendings over a time period of 15 days in October. Here, it might be informative to see which spending categories are reoccurring and which are just one time spendings.
+
+```{r}
+spendings %>% 
+  tidyplot(x = category) %>% 
+  add_count_bar()
+```
+
+One thing to note here is that the x-axis labels are overlapping and are thus unreadable. There are at least two possible solutions for this. One is to swap the x and y-axis.
+
+```{r}
+spendings %>% 
+  tidyplot(y = category) %>% 
+  add_count_bar()
+```
+
+The other one is to rotate the x-axis labels.
+
+```{r}
+spendings %>% 
+  tidyplot(x = category) %>% 
+  add_count_bar() %>% 
+  adjust_x_axis(rotate_labels = TRUE)
+```
+
+Now we can appreciate that this family had reoccurring spendings for _Food_ but just one spending for _Housing_.
+
+Next, we ask the question _how much_ was spend on each of the categories by plotting the `sum` amount.
+
+```{r}
+spendings %>% 
+  tidyplot(x = category, y = amount, color = category) %>% 
+  add_sum_bar() %>% 
+  adjust_x_axis(rotate_labels = TRUE)
+```
+
+Note that we had to introduce the argument `y = amount` in the `tidyplot()` function to make it clear which variable should be summed up.
+
+I also added `color = category` in the `tidyplot()` function to have the variable `category` encoded by different colors.
+
+Since the labels for the variable `category` are now duplicated in the plot, one could argue that it would be justified to remove the duplicated information on the x-axis.
+
+```{r}
+spendings %>% 
+  tidyplot(x = category, y = amount, color = category) %>% 
+  add_sum_bar() %>% 
+  adjust_x_axis(rotate_labels = TRUE) %>% 
+  remove_x_axis_labels() %>% 
+  remove_x_axis_title() %>% 
+  remove_x_axis_ticks()
+```
+
+Note that besides the x-axis labels, I also removed the x-axis ticks and x-axis title to achieve a cleaner look.
+
+Of course you are free to play around with different graphical representations of the sum values. Here is an example of a lollipop plot constructed from a thin `bar` and a `dot`.
+
+```{r}
+spendings %>% 
+  tidyplot(x = category, y = amount, color = category) %>% 
+  add_sum_bar(width = 0.03) %>% 
+  add_sum_dot() %>% 
+  add_sum_value(accuracy = 1) %>% 
+  adjust_x_axis(rotate_labels = TRUE) %>% 
+  remove_x_axis_labels() %>% 
+  remove_x_axis_title() %>% 
+  remove_x_axis_ticks()
+```
+
+I also added the sum value as text label using the `add_sum_value()` function. 
+
+# Heatmaps
+
+Heatmaps are a great way to plot a _continuous variable_ across two additional _variables_. To exemplify this, we will have a look at the `gene_expression` dataset.
+
+```{r, results='markup'}
+gene_expression %>% 
+  dplyr::glimpse()
+```
+
+We will start by plotting the `expression` values of each `external_gene_name` across the `sample` variable.
+
+```{r}
+gene_expression %>% 
+  tidyplot(x = sample, y = external_gene_name, color = expression) %>% 
+  add_heatmap()
+```
+
+One thing to note here is that the y-axis labels are overlapping. So let's increase the height of the plot area from 50 to 100 mm.
+
+```{r, fig.asp=0.9}
+gene_expression %>% 
+  tidyplot(x = sample, y = external_gene_name, color = expression) %>% 
+  add_heatmap() %>%
+  adjust_size(height = 100)
+```
+
+The next thing to note is that some of the rows like _Map1a_ and _Kif1a_ show very high values while other rows show much lower values. Let's apply a classical technique to reserve the color range for differences within each row. This is done by calculating _row z scores_ for each row individually. Luckily, tidyplots does this for us when setting the argument `scale = "row"` within the `add_heatmap()` function call.
+
+```{r, fig.asp=0.9}
+gene_expression %>% 
+  tidyplot(x = sample, y = external_gene_name, color = expression) %>% 
+  add_heatmap(scale = "row") %>%
+  adjust_size(height = 100)
+```
+
+Now it much easier to appreciate the dynamics of individual genes across the samples on the x-axis.
+
+However, the rows appear to be mixed. Some having rather high expression in the "Eip" samples while others have high value in the "Hip" samples. Conveniently, there is a variable called `direction` in the dataset, which classifies genes as being either "up" or "down" regulated. Let's use this variable to sort our y-axis.
+
+```{r, fig.asp=0.9}
+gene_expression %>% 
+  tidyplot(x = sample, y = external_gene_name, color = expression) %>% 
+  add_heatmap(scale = "row") %>%
+  adjust_size(height = 100) %>% 
+  sort_y_axis_labels(direction)
+```
+
+# Central tendency
+
+In cases with multiple data points per experimental group, the `mean` and the `median` are a great way to compute a typical center value for the group, also known as central tendency measure. In tidyplots, these function start with `add_mean_` or `add_median_`.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score) %>% 
+  add_data_points_beeswarm() %>% 
+  add_mean_dash()
+```
+
+The second part of the function name is dedicated to the graphical representation. These include the representation as `bar`, `dash`, `dot`, `value`, `line` or `area`. Of course, these different representations can also be combined. Like in this case `line` and `dot`.
+
+```{r}
+time_course %>% 
+  tidyplot(x = day, y = score, color = treatment) %>% 
+  add_mean_line() %>% 
+  add_mean_dot()
+```
+
+Or in this case `line` and `area`.
+
+```{r}
+time_course %>% 
+  tidyplot(x = day, y = score, color = treatment) %>% 
+  add_mean_line(linewidth = 1) %>% 
+  add_mean_area(alpha = 0.2)
+```
+
+Here is one more example using `bar` and `value`.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score) %>% 
+  add_mean_bar() %>% 
+  add_mean_value()
+```
+
+You could also plot the `mean` and the `median` together to explore in which cases they diverge. In the example below the `mean` is shown in orange and the `median` in purple.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score) %>% 
+  add_data_points_beeswarm(color = "grey") %>% 
+  add_mean_dash(color = "orange") %>% 
+  add_median_dash(color = "purple")
+```
+
+# Dispersion & uncertainty
+
+To complement the central tendency measure, it is often helpful to provide information about the variability or dispersion of the data points. Such measures include the standard error of the mean `sem`, the standard deviation `sd`, the `range` from the highest to the lowest data point and the 95% confidence interval `ci95`.
+
+A classical representation of dispersion is an `errorbar`.
+
+```{r}
+time_course %>% 
+  tidyplot(x = day, y = score, color = treatment) %>% 
+  add_mean_line() %>% 
+  add_mean_dot() %>% 
+  add_sem_errorbar(width = 2)
+```
+
+Or the use of a semitransparent `ribbon`.
+
+```{r}
+time_course %>% 
+  tidyplot(x = day, y = score, color = treatment) %>% 
+  add_mean_line() %>% 
+  add_mean_dot() %>% 
+  add_sem_ribbon()
+```
+
+Another widely used alternative, especially for not normally distributed data is the use of `violin` or `boxplot`. Starting with the `violin`, the shape of these plots resembles the underlying distribution of the data points.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_violin()
+```
+
+These can be further augmented by adding, for example, the 0.5 quantile and the underlying data points.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_violin(draw_quantiles = 0.5) %>% 
+  add_data_points_beeswarm()
+```
+
+The `boxplot` is the more classical approach, in which the quantiles are visualized by a box and whiskers.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_boxplot()
+```
+
+Finally, although it is not strictly a measure of central tendency, you can fit a curve through your data to derive an abstracted representation.
+
+```{r}
+time_course %>% 
+  tidyplot(x = day, y = score, color = treatment) %>% 
+  add_curve_fit()
+```
+
+# Distribution
+
+When looking at a single distribution of values, a classical approach for visualization is a `histogram`.
+
+```{r}
+energy %>% 
+  tidyplot(x = energy) %>% 
+  add_histogram()
+```
+
+If you want to compare multiple distributions, `violin` or `boxplot` are two potential solutions.
+
+```{r}
+distributions %>% 
+  tidyplot(x = name, y = value) %>% 
+  add_violin() %>% 
+  add_data_points_beeswarm()
+```
+
+# Proportion
+
+Proportional data provides insights into the proportion or percentage that each individual category contributes to the total. To explore the visualization of proportional data in tidyplots, let's introduce the `energy` dataset.
+
+```{r, results='markup'}
+energy %>% 
+  dplyr::glimpse()
+```
+
+As you might appreciate, this dataset contains the `energy` in terawatt hours (TWh) produced per `energy_source` in Germany between `year` 2002 and 2024. Let's start with a `pie` plot.
+
+```{r}
+energy %>% 
+  tidyplot(color = energy_type) %>% 
+  add_pie()
+```
+
+The above plot represents the `count` of values across the different `energy_type` categories.
+
+However, we might be more interested, in the `sum` contribution of each `energy_type` to the total `energy` production. Therefore, we have to provide the variable `energy` as a `y` argument to the `tidyplots()` function.
+
+```{r}
+energy %>% 
+  tidyplot(y = energy, color = energy_type) %>% 
+  add_donut()
+```
+
+Now we can appreciate the contribution of each energy type. Note that I also changed the `pie` for a `donut` plot, which is basically a pie chart with a white hole in the center.
+
+The main criticism of `pie` and `donut` plots is that the human brain struggles to accurately interpret the proportions represented. A slightly better option might be a `barstack` plot.
+
+```{r}
+energy %>% 
+  tidyplot(y = energy, color = energy_type) %>% 
+  add_barstack_absolute()
+```
+
+However, for a direct comparison, a classical bar plot is probably still the best option.
+
+```{r}
+energy %>% 
+  tidyplot(x = energy_type, y = energy, color = energy_type) %>% 
+  add_sum_bar() %>% 
+  add_sum_value() %>% 
+  sort_x_axis_labels()
+```
+
+Nevertheless, to visualize proportional data across time or another variable, `barstack` plots are the way to go.
+
+```{r}
+energy %>% 
+  tidyplot(x = year, y = energy, color = energy_type) %>% 
+  add_barstack_absolute()
+```
+
+If we want to focus more on the relative instead of the absolute contribution, we can use the `add_barstack_relative()` function.
+
+```{r}
+energy %>% 
+  tidyplot(x = year, y = energy, color = energy_type) %>% 
+  add_barstack_relative()
+```
+
+A similar plot can be achieved using an `areastack`.
+
+```{r}
+energy %>% 
+  tidyplot(x = year, y = energy, color = energy_type) %>% 
+  add_areastack_relative()
+```
+
+In both plots, the increasing contribution of renewable energy to the total energy production over time becomes apparent.
+
+This can also be shown using donut plots. However, we need to downsample the dataset to 4 representative years.
+
+```{r}
+energy %>% 
+  # downsample to 4 representative years
+  dplyr::filter(year %in% c(2005, 2010, 2015, 2020)) %>% 
+  # start plotting
+  tidyplot(y = energy, color = energy_type) %>% 
+  add_donut() %>% 
+  adjust_colors(new_colors = c("Fossil" = "grey",
+                               "Nuclear" = "#F6C54D",
+                               "Renewable" = "#4FAE62",
+                               "Other" = "#C02D45")) %>%  
+  split_plot(by = year)
+```
+
+Now, let's examine a related dataset that presents one week of energy data with higher time resolution.
+
+```{r}
+energy_week %>% 
+  tidyplot(date, power, color = energy_source) %>% 
+  add_areastack_absolute()
+```
+
+In this plot, one can appreciate the higher contribution of solar power during day time in comparison to night time.
+
+Also this plot can be shown as a relative areastack.
+
+```{r}
+energy_week %>% 
+  tidyplot(date, power, color = energy_source) %>% 
+  add_areastack_relative()
+```
+
+This illustrates nicely how wind energy compensates for the lack of solar power during the night. However, when wind is weak, as on September 10, fossil energy sources need to step in to fill the gap.
+
+# Statistical comparison
+
+To test for differences between experimental groups, tidyplots offers the functions `add_test_asterisks()` and `add_test_pvalue()`. While the first one includes asterisks for symbolizing significance.
+
+```{r}
+study %>% 
+  tidyplot(x = dose, y = score, color = group) %>% 
+  add_mean_dash() %>% 
+  add_sem_errorbar() %>% 
+  add_data_points() %>% 
+  add_test_asterisks()
+```
+
+`add_test_pvalue()` provides the computed _p_ value.
+
+```{r}
+study %>% 
+  tidyplot(x = dose, y = score, color = group) %>% 
+  add_mean_dash() %>% 
+  add_sem_errorbar() %>% 
+  add_data_points() %>% 
+  add_test_pvalue()
+```
+
+As you might have noted, when using these functions, a caption is automatically included that provides details about the statistical testing performed. The default is a Student's _t_ test without multiple comparison adjustment.
+
+Both can be changed by providing the `method` and `p.adjust.method` arguments.
+
+For example, let's perform a Wilcoxon signed-rank test with Benjamini--Hochberg adjustment.
+
+```{r}
+study %>% 
+  tidyplot(x = dose, y = score, color = group) %>% 
+  add_mean_dash() %>% 
+  add_sem_errorbar() %>% 
+  add_data_points() %>% 
+  add_test_pvalue(method = "wilcoxon", p.adjust.method = "BH")
+```
+
+It often makes sense to compare all experimental conditions to a control condition. For example, let's say treatment "A" is our control.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_mean_dash() %>% 
+  add_sem_errorbar() %>% 
+  add_data_points() %>% 
+  add_test_pvalue(ref.group = "A")
+```
+
+In some scenarios you have a mixture of significant and non-significant _p_ values.
+
+```{r}
+gene_expression %>% 
+  # filter to one gene
+  dplyr::filter(external_gene_name == "Apol6") %>% 
+  # start plotting
+  tidyplot(x = condition, y = expression, color = sample_type) %>% 
+  add_mean_dash() %>% 
+  add_sem_errorbar() %>% 
+  add_data_points() %>% 
+  add_test_pvalue()
+```
+
+Here you can choose to hide the non-significant _p_ value using `hide.ns = TRUE`.
+
+```{r}
+gene_expression %>% 
+  # filter to one gene
+  dplyr::filter(external_gene_name == "Apol6") %>% 
+  # start plotting
+  tidyplot(x = condition, y = expression, color = sample_type) %>% 
+  add_mean_dash() %>% 
+  add_sem_errorbar() %>% 
+  add_data_points() %>% 
+  add_test_pvalue(hide.ns = TRUE)
+```
+
+Finally, if you want to hide the caption with statistical information you can do this by providing `hide_info = TRUE`.
+
+```{r}
+gene_expression %>% 
+  # filter to one gene
+  dplyr::filter(external_gene_name == "Apol6") %>% 
+  # start plotting
+  tidyplot(x = condition, y = expression, color = sample_type) %>% 
+  add_mean_dash() %>% 
+  add_sem_errorbar() %>% 
+  add_data_points() %>% 
+  add_test_pvalue(hide.ns = TRUE, hide_info = TRUE)
+```
+
+There are many more things you can do with statistical comparisons. Just check out the documentation of `add_test_pvalue()` and the underlying function `ggpubr::geom_pwc()`.
+
+# Annotation
+
+Sometimes you wish to add annotations to provide the reader with important additional information. For example, tidyplots let's you add a `title` and a `caption`.
+
+```{r}
+study %>% 
+  tidyplot(x = treatment, y = score, color = treatment) %>% 
+  add_mean_dash() %>% 
+  add_sem_errorbar() %>% 
+  add_data_points() %>% 
+  add_title("Interesting study") %>% 
+  add_caption("Here is some more detail how the study was performed")
+```
+
+In other cases you might want to highlight specific data points or reference values in the plot. Let's take the `animals` dataset and plot `speed` versus `weight`.
+
+```{r}
+animals %>% 
+  tidyplot(x = weight, y = speed) %>% 
+  add_data_points()
+```
+
+Here it might be interesting to have closer at the extreme values. First, let's highlight the heaviest and the fastest animal.
+
+```{r}
+animals %>% 
+  tidyplot(x = weight, y = speed) %>% 
+  add_data_points() %>% 
+  add_data_points(data = max_rows(weight, 1), color = "red", shape = 1, size = 2) %>% 
+  add_data_points(data = max_rows(speed, 1), color = "red", shape = 1, size = 2)
+```
+
+Now it would interesting to know the names of these animals. We can plot the names of all animals.
+
+```{r}
+animals %>% 
+  tidyplot(x = weight, y = speed) %>% 
+  add_data_points() %>% 
+  add_data_labels(label = animal)
+```
+
+Note that I provided the `label` argument to the `add_data_labels()` function to indicate the variable in the dataset that should be used for the text labels.
+
+Another thing to note is that there is quite some overlap of labels in the lower left of the plot. Let's try to separate the data labels using the `add_data_labels_repel()` function.
+
+```{r}
+animals %>% 
+  tidyplot(x = weight, y = speed) %>% 
+  add_data_points() %>% 
+  add_data_labels_repel(label = animal)
+```
+
+While the general idea might have been good, there are still too many labels to be plotted. So let's restrict the labels to the 3 heaviest and the 3 fastest animals.
+
+```{r}
+animals %>% 
+  tidyplot(x = weight, y = speed) %>% 
+  add_data_points() %>% 
+  add_data_labels_repel(data = max_rows(weight, 3), animal) %>% 
+  add_data_labels_repel(data = max_rows(speed, 3), animal)
+```
+
+There is lot tweaking that can be done with repelling data labels. For more details have a look at the documentation of `add_data_labels_repel()`, the underlying function `ggrepel::geom_text_repel()` and [ggrepel examples](https://ggrepel.slowkow.com/articles/examples).
+
+As one last thing, let's add some reference lines, to highlight specific values on the x and y-axis.
+
+```{r}
+animals %>% 
+  tidyplot(x = weight, y = speed) %>% 
+  add_reference_lines(x = 4000, y = c(100, 200)) %>% 
+  add_data_points() %>% 
+  add_data_labels_repel(data = max_rows(weight, 3), animal) %>% 
+  add_data_labels_repel(data = max_rows(speed, 3), animal)
+```
+
+# What's more?
+
+To dive deeper into code-based plotting, here a couple of resources.
+
+## tidyplots documentation
+
+- [Package index](https://jbengler.github.io/tidyplots/reference/index.html)  
+Overview of all tidyplots functions
+
+- [Get started](https://jbengler.github.io/tidyplots/articles/tidyplots.html)  
+Getting started guide
+
+- [Visualizing data](https://jbengler.github.io/tidyplots/articles/Visualizing-data.html)  
+Article with examples for common data visualizations
+
+- [Advanced plotting](https://jbengler.github.io/tidyplots/articles/Advanced-plotting.html)  
+Article about advanced plotting techniques and workflows
+
+- [Color schemes](https://jbengler.github.io/tidyplots/articles/Color-schemes.html)  
+Article about the use of color schemes
+
+## Other resources
+
+- [Hands-On Programming with R](https://rstudio-education.github.io/hopr/)   
+Free online book by Garrett Grolemund
+
+- [R for Data Science](https://r4ds.hadley.nz)  
+Free online book by Hadley Wickham
+
+- [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)  
+Free online book by Claus O. Wilke
+
+

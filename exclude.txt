@@ -57,3 +57,6 @@ package.json
 package-lock.json
 
 tsconfig.json
+
+.git/
+.github/
