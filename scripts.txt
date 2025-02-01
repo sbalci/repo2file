@@ -17,3 +17,48 @@ python dump2.py "C:\Users\info\Documents\GitHub\meddecide" meddecide.txt "C:\Use
 python dump2.py "C:\Users\info\Documents\GitHub\jjstatsplot" jjstatsplot.txt "C:\Users\info\Documents\GitHub\jjstatsplot\.gitignore" "exclude.txt" .R .yaml 
 
 python dump2.py "C:\Users\info\Documents\GitHub\tidyplots" tidyplots.txt "C:\Users\info\Documents\GitHub\jjstatsplot\.gitignore" "exclude.txt" .R .Rmd 
+
+python dump2.py "D:\GitHub\SimpleSurvival" SimpleSurvival.txt "exclude.txt"
+
+python dump2.py "D:\GitHub\grandqc" grandqc.txt "exclude.txt"
+
+python dump2.py "D:\GitHub\deathwatch" deathwatch.txt "exclude.txt"
+
+python dump2.py "D:\GitHub\jmv" jmv.txt "exclude.txt"
+
+python dump2.py "D:\GitHub\gamlj" gamlj.txt "exclude.txt"
+
+python dump2.py "D:\GitHub\dlup" dlup.txt "exclude.txt"
+
+python dump2.py "D:\GitHub\tiatoolbox" tiatoolbox.txt "exclude.txt"
+
+python script.py /path/to/scan output.txt
+
+python script.py /path/to/scan output.txt --max-chunk-size 2
+
+python script.py /path/to/scan output.txt .gitignore exclude.txt .py .js --max-chunk-size 5
+
+python dump3.py "D:\GitHub\tiatoolbox" tiatoolbox.txt "D:\GitHub\tiatoolbox\.gitignore" "exclude.txt" --skip-substring iVBORw0
+
+python dump3.py "D:\GitHub\BioImageAnalysisNotebooks" BioImageAnalysisNotebooks.txt "D:\GitHub\BioImageAnalysisNotebooks\.gitignore" "exclude.txt" --skip-substring iVBORw0
+  
+python dump3.py "D:\GitHub\bioimagebook.github.io" bioimagebook.github.io.txt "D:\GitHub\bioimagebook.github.io\.gitignore" "exclude.txt" --skip-substring iVBORw0
+
+python dump3.py "D:\GitHub\HistoQC" HistoQC.txt "D:\GitHub\HistoQC\.gitignore" "exclude.txt" --skip-substring iVBORw0
+
+python dump3.py "D:\GitHub\QuickAnnotator" QuickAnnotator.txt "D:\GitHub\QuickAnnotator\.gitignore" "exclude.txt" --skip-substring iVBORw0
+
+python dump3.py "D:\GitHub\QuPathPaquoIntegration" QuPathPaquoIntegration.txt "D:\GitHub\QuPathPaquoIntegration\.gitignore" "exclude.txt" --skip-substring iVBORw0
+
+python dump3.py "D:\GitHub\QuPathGeoJSONImportExport" QuPathGeoJSONImportExport.txt "D:\GitHub\QuPathGeoJSONImportExport\.gitignore" "exclude.txt" --skip-substring iVBORw0
+
+python dump3.py "D:\GitHub\paquo" paquo.txt "D:\GitHub\paquo\.gitignore" "exclude.txt" --skip-substring iVBORw0 --max-chunk-size 2
+
+python dump3.py "D:\GitHub\qupath-docs" qupath-docs.txt "D:\GitHub\qupath-docs\.gitignore" "exclude.txt" --skip-substring iVBORw0
+
+python dump3.py "D:\GitHub\LazySlide" LazySlide.txt "D:\GitHub\LazySlide\.gitignore" "exclude.txt" --skip-substring iVBORw0
+
+python dump3.py "D:\GitHub\wsidata" wsidata.txt "D:\GitHub\wsidata\.gitignore" "exclude.txt" --skip-substring iVBORw0 --max-chunk-size 2
+
+python dump3.py "D:\GitHub\grandqc" grandqc.txt "D:\GitHub\grandqc\.gitignore" "exclude.txt" --skip-substring iVBORw0 --max-chunk-size 2
+ 
