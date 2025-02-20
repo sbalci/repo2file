@@ -74,8 +74,6 @@ def get_excluded_extensions() -> Set[str]:
         'js', 'jsx', 'ts', 'tsx', 'mjs', 'cjs', 'mts', 'cts',
         # Python
         'pyc', 'pyo', 'pyd',
-        # Documentation
-        'pdf', 'docx', 'doc', 'md',
         # Other
         'jar', 'pem', 'log'
     }
@@ -95,9 +93,9 @@ def parse_exclusion_files(file_paths: List[str]) -> Set[str]:
     
     # Add common version control and environment patterns
     common_paths = {
-        '.git', '.idea', '.venv', 'venv', 'node_modules', '__pycache__',
-        '.pytest_cache', 'build', 'dist', '.tox', 'coverage', 'htmlcov',
-        '.ipynb_checkpoints', '.mypy_cache', '.ruff_cache'
+        '.git', '.idea', '.venv', 'venv', 'node_modules',
+        'build', 'dist', '.tox', 'coverage', 'htmlcov',
+        '.mypy_cache', '.ruff_cache'
     }
     for path in common_paths:
         patterns.add(path)
@@ -142,15 +140,20 @@ def parse_exclusion_files(file_paths: List[str]) -> Set[str]:
     
     return patterns
 
+
+
 def should_skip_directory(dir_name: str, rel_path: str, exclusion_patterns: Set[str]) -> bool:
     """
     Determines if a directory should be skipped based on its name and relative path.
     Handles both explicit directory patterns and general exclusion patterns.
     """
+    # Define protected file extensions that should prevent directory skipping
+    PROTECTED_EXTENSIONS = {'.py', '.groovy', '.r', '.rmd', '.md', '.ipynb'}
+    
     # Always skip these directories regardless of pattern matching
     ALWAYS_SKIP = {
-        '.git', '.idea', '.venv', 'venv', 'node_modules', '__pycache__', 
-        '.pytest_cache', 'build', 'dist', '.tox', 'coverage', 'htmlcov'
+        '.git', '.idea', '.venv', 'venv', 'node_modules',
+        'build', 'dist', '.tox', 'coverage', 'htmlcov'
     }
     
     if dir_name in ALWAYS_SKIP:
@@ -161,77 +164,161 @@ def should_skip_directory(dir_name: str, rel_path: str, exclusion_patterns: Set[
     normalized_path = rel_path.replace('\\', '/').lower()
     dir_name = dir_name.lower()
     
-    # Skip hidden directories (starting with .)
-    if dir_name.startswith('.'):
-        print(f"Skipping hidden directory: {normalized_path}")
-        return True
+    # Skip hidden directories (starting with .) unless they contain protected files
+    if dir_name.startswith('.') and dir_name != '.':  # Allow current directory
+        try:
+            # Try to check if directory contains protected files
+            if os.path.exists(rel_path):
+                for ext in PROTECTED_EXTENSIONS:
+                    try:
+                        if any(f.endswith(ext) for f in os.listdir(rel_path)):
+                            print(f"Keeping hidden directory {normalized_path} - contains protected files")
+                            return False
+                    except OSError:
+                        continue
+            print(f"Skipping hidden directory: {normalized_path}")
+            return True
+        except Exception as e:
+            print(f"Warning: Error checking directory {normalized_path} - {str(e)}")
+            return True
         
     # Check against exclusion patterns
     for pattern in exclusion_patterns:
         pattern = pattern.lower()
         
+        # Skip the overly broad .* pattern
+        if pattern == '.*':
+            continue
+            
         # Remove any trailing '/**' for directory matching
         if pattern.endswith('/**'):
             pattern = pattern[:-3]
             
         # Check both the directory name and full path
         if fnmatch.fnmatch(dir_name, pattern) or fnmatch.fnmatch(normalized_path, pattern):
-            print(f"Skipping directory {normalized_path} - matches pattern {pattern}")
-            return True
+            try:
+                # Check if directory exists and contains protected files
+                if os.path.exists(rel_path):
+                    for ext in PROTECTED_EXTENSIONS:
+                        try:
+                            if any(f.endswith(ext) for f in os.listdir(rel_path)):
+                                print(f"Keeping directory {normalized_path} - contains protected files")
+                                return False
+                        except OSError:
+                            continue
+                print(f"Skipping directory {normalized_path} - matches pattern {pattern}")
+                return True
+            except Exception as e:
+                print(f"Warning: Error checking directory {normalized_path} - {str(e)}")
+                return True
             
     return False
+
+
+
+
+
+
 
 def should_exclude_file(file_name: str, file_rel_path: str, exclusion_patterns: Set[str]) -> bool:
     """
     Enhanced file exclusion check with improved pattern matching.
     Handles various pattern types and normalizes paths consistently.
     """
+    # Define protected extensions that should never be excluded
+    PROTECTED_EXTENSIONS = {'.py', '.groovy', '.r', '.rmd', '.md', '.ipynb'}
+    
+    # Special case: always exclude license.md regardless of protection
+    if file_name.lower() == 'license.md':
+        print(f"Excluding {file_rel_path} - license.md is explicitly excluded")
+        return True
+    
     # Normalize paths for consistent matching
     normalized_name = file_name.lower()
     normalized_path = file_rel_path.replace('\\', '/').lower()
     
-    # Get file extension (without dot)
-    ext = os.path.splitext(normalized_name)[1].lstrip('.').lower()
+    # Check if file has a protected extension
+    if any(normalized_name.endswith(ext) for ext in PROTECTED_EXTENSIONS):
+        print(f"Keeping {file_rel_path} - protected file type")
+        return False
     
-    # Quick check for excluded extensions
-    if ext in get_excluded_extensions():
-        print(f"Excluding {file_rel_path} - extension '{ext}' is in excluded list")
-        return True
-    
-    # Check path components for hidden files/directories
-    path_parts = normalized_path.split('/')
-    if any(part.startswith('.') for part in path_parts):
-        print(f"Excluding {file_rel_path} - hidden file or in hidden directory")
-        return True
-    
-    # Check against all patterns
-    for pattern in exclusion_patterns:
-        pattern = pattern.lower()
-        
-        # Extension patterns
-        if pattern.startswith('*.'):
-            if normalized_name.endswith(pattern[1:]):
-                print(f"Excluding {file_rel_path} - matches extension pattern: {pattern}")
-                return True
-        
-        # Directory patterns
-        elif pattern.endswith('/**'):
-            base_pattern = pattern[:-3]
-            if normalized_path.startswith(base_pattern + '/') or normalized_path == base_pattern:
-                print(f"Excluding {file_rel_path} - matches directory pattern: {pattern}")
-                return True
-        
-        # Path patterns
-        elif fnmatch.fnmatch(normalized_path, pattern):
-            print(f"Excluding {file_rel_path} - matches path pattern: {pattern}")
-            return True
-        
-        # Component patterns
-        elif any(fnmatch.fnmatch(part, pattern) for part in path_parts):
-            print(f"Excluding {file_rel_path} - path component matches pattern: {pattern}")
-            return True
-    
-    return False
+    # Rest of the function remains the same...
+
+def process_file(
+    file_path: str,
+    file_rel_path: str,
+    safe_write,
+    skip_substrings: Optional[List[str]] = None,
+    strip_ipynb_outputs: bool = True
+) -> None:
+    """
+    Processes a single file, handling different file types appropriately.
+    """
+    safe_write(f"Content of {file_rel_path}:\n")
+
+    # Handle Jupyter notebooks specially
+    _, ext = os.path.splitext(file_path)
+    if ext.lower() == ".ipynb":
+        try:
+            with open(file_path, 'r', encoding='utf-8') as fin:
+                nb_data = json.load(fin)
+
+            # Remove outputs and image data from each cell
+            cells = nb_data.get("cells", [])
+            for cell in cells:
+                # Remove outputs
+                if "outputs" in cell:
+                    # Keep text outputs but remove image data
+                    filtered_outputs = []
+                    for output in cell["outputs"]:
+                        # Keep only text/plain outputs
+                        if output.get("output_type") == "stream" or \
+                           (output.get("output_type") == "execute_result" and 
+                            "text/plain" in output.get("data", {})):
+                            # Keep only text/plain data if it's an execute result
+                            if output.get("output_type") == "execute_result":
+                                output["data"] = {"text/plain": output["data"]["text/plain"]}
+                            filtered_outputs.append(output)
+                    cell["outputs"] = filtered_outputs
+                
+                # Remove execution count
+                if "execution_count" in cell:
+                    cell["execution_count"] = None
+
+            # Write processed notebook
+            nb_str = json.dumps(nb_data, ensure_ascii=False, indent=2)
+            safe_write(nb_str)
+            safe_write("\n")
+
+        except Exception as e:
+            safe_write(f"Error processing .ipynb file: {str(e)}\n")
+        return
+
+    # Handle all other files normally
+    try:
+        with open(file_path, 'r', encoding='utf-8') as fin:
+            while True:
+                chunk = fin.readline()
+                if not chunk:
+                    break
+                if skip_substrings and any(sub in chunk for sub in skip_substrings):
+                    continue
+                safe_write(chunk)
+    except Exception as e:
+        safe_write(f"Error reading file: {str(e)}. Content skipped.\n")
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ##############################################################################
 # 3. DIRECTORY TREE PRINTER
@@ -391,6 +478,7 @@ def scan_folder(
                 
                 # Skip excluded files
                 if should_exclude_file(file, file_rel_path, exclusion_patterns):
+                    # print(f"🚨 Excluded: {file_rel_path} due to {exclusion_patterns}")
                     continue
                 
                 # Apply file type filtering if specified

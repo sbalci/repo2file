@@ -1,7 +1,7 @@
 # Parameters for the script with default values
 Param(
     [string]$Organization = "histopathology",
-    [string]$LocalRootPath = "E:\GitHub",
+    [string]$LocalRootPath = "G:\GitHub",
     # Path to Python (if python is in your PATH, you can simply use "python")
     [string]$PythonPath = "python",
     # Full path to your dump3.py script
@@ -123,7 +123,7 @@ foreach ($repoLine in $repoList) {
             "--skip-substring"    # 5) skip-substring
             $skipSubstring
             "--max-chunk-size"    # 6) new argument
-            "2"
+            "8"
         )
 
         # Change directory to the repo, run python with the arguments

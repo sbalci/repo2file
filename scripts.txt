@@ -61,4 +61,36 @@ python dump3.py "D:\GitHub\LazySlide" LazySlide.txt "D:\GitHub\LazySlide\.gitign
 python dump3.py "D:\GitHub\wsidata" wsidata.txt "D:\GitHub\wsidata\.gitignore" "exclude.txt" --skip-substring iVBORw0 --max-chunk-size 2
 
 python dump3.py "D:\GitHub\grandqc" grandqc.txt "D:\GitHub\grandqc\.gitignore" "exclude.txt" --skip-substring iVBORw0 --max-chunk-size 2
- 
+
+python dump3.py "D:\GitHub\wsinfer" wsinfer.txt "D:\GitHub\wsinfer\.gitignore" "exclude.txt" --skip-substring iVBORw0 --max-chunk-size 2
+
+python dump3.py "D:\GitHub\qupath-extension-wsinfer" qupath-extension-wsinfer.txt "D:\GitHub\qupath-extension-wsinfer\.gitignore" "exclude.txt" --skip-substring iVBORw0 --max-chunk-size 2
+
+python dump3.py "D:\GitHub\extension-manager" extension-manager.txt "D:\GitHub\extension-manager\.gitignore" "exclude.txt" --skip-substring iVBORw0 --max-chunk-size 2
+
+python dump3.py "D:\GitHub\qupath-extension-template" qupath-extension-template.txt "D:\GitHub\qupath-extension-template\.gitignore" "exclude.txt" --skip-substring iVBORw0 --max-chunk-size 2
+
+python dump3.py "D:\GitHub\qupath-extension-gncnn" qupath-extension-gncnn.txt "D:\GitHub\qupath-extension-gncnn\.gitignore" "exclude.txt" --skip-substring iVBORw0 --max-chunk-size 2
+
+
+
+python dump3.py "D:\GitHub\QuPathPaquoIntegration" QuPathPaquoIntegration.txt "D:\GitHub\QuPathPaquoIntegration\.gitignore" "exclude.txt" --skip-substring iVBORw0
+
+python dump3.py "D:\GitHub\QuPathGeoJSONImportExport" QuPathGeoJSONImportExport.txt "D:\GitHub\QuPathGeoJSONImportExport\.gitignore" "exclude.txt" --skip-substring iVBORw0
+
+python dump3.py "D:\GitHub\paquo" paquo.txt "D:\GitHub\paquo\.gitignore" "exclude.txt" --skip-substring iVBORw0 --max-chunk-size 2
+
+python dump3.py "G:\GitHub\geojson2tif" geojson2tif.txt "G:\GitHub\geojson2tif\.gitignore" "exclude.txt" --skip-substring iVBORw0 --max-chunk-size 2
+
+python dump3.py "G:\GitHub\labelstrip" labelstrip.txt "G:\GitHub\labelstrip\.gitignore" "exclude.txt" --skip-substring iVBORw0 --max-chunk-size 2
+
+python dump3.py "D:\GitHub\TRIDENT" TRIDENT.txt "G:\GitHub\TRIDENT\.gitignore" "exclude.txt" --skip-substring iVBORw0 --max-chunk-size 2
+
+
+python dump3.py "D:\GitHub\ClinicoPathDescriptives" ClinicoPathDescriptives.txt .gitignore .b.R .yaml 
+
+python dump3.py "D:\GitHub\jsurvival" jsurvival.txt .gitignore .b.R .yaml 
+
+python dump3.py "D:\GitHub\meddecide" meddecide.txt .gitignore .b.R .yaml   
+
+python dump3.py "D:\GitHub\jjstatsplot" jjstatsplot.txt .gitignore .b.R .yaml  
