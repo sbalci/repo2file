@@ -1,62 +1,332 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-/node_modules
-/.pnp
+# Dependencies
+**/node_modules/**
+**/.pnp/**
+**/.yarn/**
 .pnp.js
-.yarn/install-state.gz
 
-# testing
-/coverage
+# Testing
+**/coverage/**
 
-# next.js
-/.next/
-/out/
+# Next.js
+**/.next/**
+**/out/**
 
-# production
-/build
+# Production
+**/build/**
 
-# misc
+# Misc
 .DS_Store
 *.pem
 
-# debug
+# Debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
+# Local env files
 .env*.local
+.env
+.env.prod
 
-# vercel
-.vercel
+# Vercel
+**/.vercel/**
 
-# typescript
+# TypeScript
 *.tsbuildinfo
 next-env.d.ts
 certificates
 
-# sentry
+# Sentry
 .sentryclirc
 
-# environment
+# Environment
 .env*.local
 
-.env
-.env.prod
-
-.git/*
-
-/public/
-
+# Exclude Git directories and files
+**/.git/**
+**/git/**
+**/.github/**
 .gitignore
-package.json
-package-lock.json
 
-package.json
-package-lock.json
+# Exclude project-specific folders and files
+**/public/**
+**/tests/**
+**/data/**
+**/man/**
+.Rd
 
+# Exclude specific files
+LICENSE
+LICENSE.md
 tsconfig.json
+package.json
+package-lock.json
 
-.git/
-.github/
+# Virtual environments
+**/venv/**
+**/.venv/**
+**/inst/**
+**/env/**
+**/ENV/**
+**/env.bak/**
+**/venv.bak/**
+
+# IDE and Docker files
+**/.idea/**
+**/idea/**
+**/docker/**
+**/.Rproj.user/**
+
+# Exclude common file types
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+*.tif
+*.tiff
+*.bmp
+*.mp4
+*.jar
+*.mp3
+*.wav
+*.ogg
+*.flac
+*.webm
+*.mov
+*.avi
+*.rar
+*.7z
+*.tar
+*.gz
+*.bz2
+*.zip
+*.xz
+
+# Other excluded folders
+**/locales/**
+**/_static/**
+**/_ext/**
+
+# JavaScript files
+*.js
+
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data files
+.RData
+.RDataTmp
+
+# User-specific files
+.Ruserdata
+
+# Example code in package build process
+*-Ex.R
+
+# Output files from R CMD build
+/*.tar.gz
+
+# Output files from R CMD check
+**/*.Rcheck/**
+
+# produced vignettes
+**/vignettes/**/*.html
+**/vignettes/**/*.pdf
+
+# OAuth2 token
+.httr-oauth
+
+# knitr and R markdown default cache directories
+**/*_cache/**
+**/cache/**
+
+# Temporary files created by R markdown
+*.utf8.md
+*.knit.md
+
+# R Environment Variables
+.Renviron
+
+# pkgdown site
+**/docs/**
+
+# translation temp files
+**/po/*~
+
+# RStudio Connect folder
+**/rsconnect/**
+
+# Byte-compiled / optimized / DLL files
+**/__pycache__/**
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+**/build/**
+**/develop-eggs/**
+**/dist/**
+**/downloads/**
+**/eggs/**
+**/.eggs/**
+**/lib/**
+**/lib64/**
+**/parts/**
+**/sdist/**
+**/var/**
+**/wheels/**
+**/share/python-wheels/**
+**/*.egg-info/**
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller files
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+**/htmlcov/**
+**/.tox/**
+**/.nox/**
+.coverage
+.coverage.*
+**/.cache/**
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+**/.hypothesis/**
+**/.pytest_cache/**
+**/cover/**
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff
+*.log
+local_settings.py
+**/db.sqlite3
+**/db.sqlite3-journal
+
+# Flask stuff
+**/instance/**
+**/.webassets-cache/**
+
+# Scrapy stuff
+**/.scrapy/**
+
+# Sphinx documentation
+**/docs/_build/**
+
+# PyBuilder
+**/.pybuilder/**
+**/target/**
+
+# Jupyter Notebook
+**/.ipynb_checkpoints/**
+
+# IPython
+**/profile_default/**
+ipython_config.py
+
+# pyenv
+#.python-version
+
+# pipenv
+#Pipfile.lock
+
+# UV
+#uv.lock
+
+# poetry
+#poetry.lock
+
+# pdm
+.pdm.toml
+.pdm-python
+**/.pdm-build/**
+
+# PEP 582
+**/__pypackages__/**
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+**/env/**
+**/venv/**
+**/ENV/**
+**/env.bak/**
+**/venv.bak/**
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+**/site/**
+
+# mypy
+**/.mypy_cache/**
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+**/.pyre/**
+
+# pytype static type analyzer
+**/.pytype/**
+
+# Cython debug symbols
+**/cython_debug/**
+
+# PyCharm
+**/.idea/**
+
+# Ruff cache
+**/.ruff_cache/**
+
+# PyPI configuration file
+.pypirc
+
+# File formats to exclude
+*.csv  # Comma-separated values files
+*.CSV  # Case-insensitive CSV files
+*.js   # JavaScript files
+*.JS   # Case-insensitive JavaScript files
+*.jsx  # React JavaScript files
+*.mjs  # ES modules JavaScript files
+*.cjs  # CommonJS files
+*.ts   # TypeScript files
+*.TS   # Case-insensitive TypeScript files
+*.tsx  # React TypeScript files
+*.mts  # ES modules TypeScript files
+*.cts  # CommonJS TypeScript files
+*.svs
+*.resx
+*.xml
+
+
