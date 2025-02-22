@@ -17,3 +17,6 @@ python dump2.py "C:\Users\info\Documents\GitHub\meddecide" meddecide.txt "C:\Use
 python dump2.py "C:\Users\info\Documents\GitHub\jjstatsplot" jjstatsplot.txt "C:\Users\info\Documents\GitHub\jjstatsplot\.gitignore" "exclude.txt" .R .yaml 
 
 python dump2.py "C:\Users\info\Documents\GitHub\tidyplots" tidyplots.txt "C:\Users\info\Documents\GitHub\jjstatsplot\.gitignore" "exclude.txt" .R .Rmd 
+
+python dump2.py "/Users/serdarbalci/Documents/GitHub/jsurvival" jsurvival_mac.txt "/Users/serdarbalci/Documents/GitHub/jsurvival/.gitignore" "exclude.txt"
+
